@@ -24,10 +24,7 @@ class _EventsPageState extends State<EventsPage> {
       ),
       body: ListView(
         children: <Widget>[
-          Image(
-            image: NetworkImage(
-                "https://lh5.googleusercontent.com/_7sQQduxTOesTkfLeNsNebFVAs7P5JEl9gaP9olRDvNvBmQyCGFCQjf3pUu6cAglZWNEPA=w16383"),
-          ),
+          Image(image: AssetImage("assets/images/events/events1.jpg")),
           Text(
             "CHG Events Calendar",
             textAlign: TextAlign.center,
@@ -39,40 +36,72 @@ class _EventsPageState extends State<EventsPage> {
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          Stack(
+          Divider(height: 15.0),
+          Container(
+              child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image(
-                image: NetworkImage(
-                    "https://lh4.googleusercontent.com/PAXbf60pUMPs2sjmqtMibOfj7XSMM4NuLMandBidFSGXw6jrfUIu8J_-MPO37PtM4i-Bzg=w16383"),
-                colorBlendMode: BlendMode.hardLight,
-                color: Colors.white54,
+              Text(
+                "TACTICAL EVENTS\n2021\nAugust Storm at Cal City\n June 11 - 13\nSpring Awakening at Hill 559\nNovember",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
-              Padding(
-                child: Text(
-                  "The CHG has changed its Bylaws governing Non-Members" +
-                      " and the Reciprocal Agreements it has with other reenactment" +
-                      " clubs: effective January 1st, 2014, the CHG will no longer" +
-                      " participate in any Reciprocity Agreements with other" +
-                      " reenactment organizations. Non-Members may still participate" +
-                      " at CHG events, but will be required to pay a Temporary" +
-                      " Membership (a 10 Dollar fee). This Temporary Membership gives" +
-                      " limited membership status for the event they are participating" +
-                      " in, thus satisfying insurance requirements and adequately" +
-                      " compensating the efforts of the CHG in hosting events." +
-                      " Please note that if you are not current on your CHG dues," +
-                      " you will need to pay either Temporary or Regular Membership" +
-                      " dues at the event. You MUST be a member in either status to" +
-                      " attend one of our events.",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                padding: EdgeInsets.all(8.0),
-              )
+              Text(
+                "PUBLIC EVENTS\n2021\n\nPlanes of Fame\nAirshow in Chino\n 30-31 Oct",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
             ],
+          )),
+          Divider(height: 30.0),
+          Text(
+            "Temporary Membership Rule",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          Divider(height: 7.5),
+          Text(
+            "The CHG has changed its Bylaws governing Non-Members" +
+                " and the Reciprocal Agreements it has with other reenactment" +
+                " clubs: effective January 1st, 2014, the CHG will no longer" +
+                " participate in any Reciprocity Agreements with other" +
+                " reenactment organizations. Non-Members may still participate" +
+                " at CHG events, but will be required to pay a Temporary" +
+                " Membership (a 10 Dollar fee). This Temporary Membership gives" +
+                " limited membership status for the event they are participating" +
+                " in, thus satisfying insurance requirements and adequately" +
+                " compensating the efforts of the CHG in hosting events." +
+                " Please note that if you are not current on your CHG dues," +
+                " you will need to pay either Temporary or Regular Membership" +
+                " dues at the event. You MUST be a member in either status to" +
+                " attend one of our events.",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          Divider(height: 15.0),
+          Text(
+            "Different Event Types",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            "For the purpose of the CHG, we differentiate all" +
+                "upcoming events as either Tactical or Living History. While" +
+                " the CHG hosts private events, CHG units themselves choose to" +
+                " participate in public events.  What follows are brief" +
+                " descriptions of the different event types with examples of" +
+                " each. See the calendar for notices and links to more" +
+                " information of CHG hosted and participating events.",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
           ),
         ],
       ), // temp
