@@ -30,36 +30,44 @@ class _EventsPageState extends State<EventsPage> {
       body: ListView(
         children: <Widget>[
           Image(image: AssetImage("assets/images/events/events1.jpg")),
-          Divider(height: 10.0),
-          Text(
-            "CHG Events Calendar",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          Text(
-            "Note: All event dates are subject to change pending Covid-19 " +
-                "restrictions as issued by local authorities to the event sites.",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          Divider(height: 15.0),
           Container(
-              child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                "TACTICAL EVENTS\n2021\nAugust Storm at Cal City\n June 11 - 13\nSpring Awakening at Hill 559\nNovember",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "PUBLIC EVENTS\n2021\n\nPlanes of Fame\nAirshow in Chino\n 30-31 Oct",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-            ],
-          )),
-          Divider(height: 10.0),
+            color: Colors.grey[400],
+            child: Column(
+              children: [
+                Text(
+                  "\nCHG Events Calendar",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "Note: All event dates are subject to change pending Covid-19 " +
+                      "restrictions as issued by local authorities to the event sites.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                Divider(height: 15.0),
+                Container(
+                    child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text(
+                      "TACTICAL EVENTS\n2021\nAugust Storm at Cal City\n June 11 - 13\nSpring Awakening at Hill 559\nNovember",
+                      textAlign: TextAlign.center,
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "PUBLIC EVENTS\n2021\n\nPlanes of Fame\nAirshow in Chino\n 30-31 Oct",
+                      textAlign: TextAlign.center,
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )),
+              ],
+            ),
+          ),
+          Divider(height: 20.0, thickness: 21.0, color: Colors.grey[400]),
           Image(image: AssetImage("assets/images/events/events2.jpg")),
           Divider(height: 10.0),
           Text(
