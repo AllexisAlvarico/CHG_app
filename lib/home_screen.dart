@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: new Column(
                         children: <Widget>[
                           new Text(
-                            "California Historical \n Group",
+                            "California Historical \nGroup",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,

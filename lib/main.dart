@@ -15,8 +15,6 @@ class MyApp extends StatelessWidget {
       home: AnimatedSplashScreen(
         splash: Image.asset(
           'assets/images/Home/Logo.png',
-          width: 50,
-          height: 50,
         ),
         nextScreen: HomeScreen(),
         splashTransition: SplashTransition.rotationTransition,
