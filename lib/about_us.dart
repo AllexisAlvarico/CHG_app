@@ -1,4 +1,6 @@
+import 'package:chg/pdfView.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutUsPage extends StatelessWidget {
   final String bodyText =
@@ -8,6 +10,28 @@ class AboutUsPage extends StatelessWidget {
       "Written and edited by CHG members for CHG members, find issues by clicking on the covers below:";
   final String footerText =
       " The CHG, founded in 1979 and incorporated in 1992, is a non-profit organization that is recognized by the Department of Defense as a World War Two educational and reenactment organization.\n\n The CHG’s is a non-political organization whose sole purpose is to preserve World War Two history through uniform, equipment and vehicle restorations, static displays, and historical reenactments.";
+
+  // launch email
+  void launchInEmail(String email) async {
+    if (await canLaunch("mailto:$email")) {
+      await launch("mailto:$email");
+    } else {
+      throw 'Could not launch email';
+    }
+  }
+
+  // launch url in browser
+  void launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        enableJavaScript: true,
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   const AboutUsPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -21,15 +45,15 @@ class AboutUsPage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              // spacing
+              // spacing between appbar and logo
               height: 50,
             ),
-            Image.network(
+            Image.asset(
                 // logo grabbed from the main website, have to reduce quality
                 // as it introduced lag
-                "https://lh6.googleusercontent.com/x1aNZrb2IYd7xPd0msjUlgj82_f6EXjZF6QJAQuER1cvDTvWUDzUOwpEA5zYb3MuZwRpIQ=w16383"),
+                "assets/images/chg_logo.png"),
             SizedBox(
-              // spacing
+              // spacing between logo and body text
               height: 50,
             ),
             CustomContainer(
@@ -48,6 +72,7 @@ class AboutUsPage extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
+                    // newsletter heading
                     newsletterHeadingText,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -55,15 +80,43 @@ class AboutUsPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    // spacing
+                    // spacing between newletter heading and body
                     height: 10,
                   ),
                   Text(
+                    // newsletter body
                     newsletterText,
                     style: TextStyle(
                       fontSize: 18,
                     ),
                   ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        PdfThumnnailButton(
+                          thumbnail: "assets/images/the_front_one.png",
+                          pdf:
+                              "http://historical.vs-hp.org/external/The%20Front%20Issue%201.pdf",
+                        ),
+                        PdfThumnnailButton(
+                          thumbnail: "assets/images/the_front_two.png",
+                          pdf:
+                              "http://historical.vs-hp.org/external/The%20Front%20Issue%202.pdf",
+                        ),
+                        PdfThumnnailButton(
+                          thumbnail: "assets/images/the_front_three.png",
+                          pdf:
+                              "http://historical.vs-hp.org/external/The%20Front%20Issue%203.pdf",
+                        ),
+                        PdfThumnnailButton(
+                          thumbnail: "assets/images/the_front_four.png",
+                          pdf:
+                              "http://historical.vs-hp.org/external/The%20Front%20Issue%204.pdf",
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
@@ -71,6 +124,99 @@ class AboutUsPage extends StatelessWidget {
               // footer with black background
               text: footerText,
               backgroundColor: Color(0xFF303033), // black color
+              child: Column(
+                children: [
+                  SizedBox(
+                    // spacing between footer text and contact us
+                    height: 50,
+                  ),
+                  Text(
+                    "Contact Us",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(
+                    // spacing between contact us heading and links
+                    height: 20,
+                  ),
+                  Row(
+                    // two icon buttons
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CustomIconButton(
+                        // president email
+                        onTap: () async {
+                          launchInEmail("thomas.metzger@gmail.com");
+                        },
+                        icon: Icon(
+                          Icons.email_outlined,
+                          color: Colors.white,
+                        ),
+                        label: Text("CHG PRESIDENT",
+                            style: TextStyle(
+                              color: Colors.white,
+                            )),
+                      ),
+                      CustomIconButton(
+                        // webmaster email
+                        onTap: () async {
+                          launchInEmail("adminz@chgww2.net");
+                        },
+                        icon: Icon(
+                          Icons.email_outlined,
+                          color: Colors.white,
+                        ),
+                        label: Text("CHG WEBMASTER",
+                            style: TextStyle(
+                              color: Colors.white,
+                            )),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    // spacing between the rows containing icon buttons
+                    height: 25,
+                  ),
+                  Row(
+                    // two icon buttons
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CustomIconButton(
+                        // public affairs email
+                        onTap: () async {
+                          launchInEmail("thomas.metzger@gmail.com");
+                        },
+                        icon: Icon(
+                          Icons.email_outlined,
+                          color: Colors.white,
+                        ),
+                        label: Text("CHG PUBLIC AFFAIRS",
+                            style: TextStyle(
+                              color: Colors.white,
+                            )),
+                      ),
+                      CustomIconButton(
+                        // facebook browser link
+                        onTap: () async {
+                          launchInBrowser(
+                              "https://www.facebook.com/groups/19634229966/");
+                        },
+                        icon: Icon(
+                          Icons.facebook_outlined,
+                          color: Colors.white,
+                        ),
+                        label: Text("CHG ON FACEBOOK",
+                            style: TextStyle(
+                              color: Colors.white,
+                            )),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -79,12 +225,19 @@ class AboutUsPage extends StatelessWidget {
   }
 }
 
+// custom container that keeps consistent padding, styling, etc for any generic
+// bits of information throughout the about us page
 class CustomContainer extends StatelessWidget {
   final String text;
   final Color backgroundColor;
-  const CustomContainer(
-      {Key? key, required this.text, required this.backgroundColor})
-      : super(key: key);
+  final Widget? child;
+
+  const CustomContainer({
+    Key? key,
+    required this.text,
+    required this.backgroundColor,
+    this.child,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -94,19 +247,86 @@ class CustomContainer extends StatelessWidget {
           20,
           10,
           20,
-          40,
+          60,
         ),
-        child: Text(
-          text,
-          style: TextStyle(
-            // if the background color is on the darker side,
-            // set the text color to white. vice versa for lighter backgrounds
-            color: backgroundColor.computeLuminance() > 0.5
-                ? Colors.black
-                : Colors.white,
-            fontSize: 18,
-          ),
+        child: Column(
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                // if the background color is on the darker side,
+                // set the text color to white. vice versa for lighter backgrounds
+                color: backgroundColor.computeLuminance() > 0.5
+                    ? Colors.black
+                    : Colors.white,
+                fontSize: 18,
+              ),
+            ),
+            child != null ? child! : Container()
+          ],
         ),
         color: backgroundColor);
+  }
+}
+
+// button with text underneath the icon
+class CustomIconButton extends StatelessWidget {
+  final Icon icon;
+  final Text? label;
+  final void Function()? onTap;
+
+  const CustomIconButton({
+    Key? key,
+    required this.icon,
+    this.label,
+    this.onTap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap != null ? onTap! : () {},
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [icon, label != null ? label! : Container()],
+      ),
+    );
+  }
+}
+
+// pdf-specific buttons that launch the pdf
+class PdfThumnnailButton extends StatelessWidget {
+  final String thumbnail;
+  final String pdf;
+
+  const PdfThumnnailButton({
+    Key? key,
+    required this.thumbnail,
+    required this.pdf,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => PDFView(
+                    path: pdf,
+                  )),
+        );
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(
+          horizontal: 10,
+          vertical: 20,
+        ),
+        child: Image.asset(
+          thumbnail,
+          height: 300,
+        ),
+      ),
+    );
   }
 }
