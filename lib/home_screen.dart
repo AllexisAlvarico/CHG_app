@@ -26,6 +26,24 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        currentIndex: 0, // this will be set when a new tab is tapped
+        items: [
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.event),
+            label: 'Events',
+          ),
+          BottomNavigationBarItem(
+              icon: new Icon(Icons.work), label: 'Headquarters'),
+          BottomNavigationBarItem(
+              icon: new Icon(Icons.person), label: 'About us'),
+        ],
+      ),
       body: Stack(
         children: <Widget>[
           Container(
@@ -50,21 +68,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         'assets/images/Home/Logo.png',
                       ),
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Column(
-                          children: <Widget>[
-                            Text(
-                              "California Historical Group",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
+                    Expanded(
+                      child: new Column(
+                        children: <Widget>[
+                          new Text(
+                            "California Historical \n Group",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
                             ),
-                          ],
-                        ),
-                      ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -74,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10,
                 padding: EdgeInsets.only(
-                  top: 25,
+                  top: 45,
                 ),
                 primary: false,
                 crossAxisCount: 2,

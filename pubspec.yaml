@@ -32,6 +32,8 @@ dependencies:
   # Svg plug-in which allows svg images to be embedded in background of apps
   flutter_svg: ^0.22.0
 
+  animated_splash_screen: ^1.1.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
