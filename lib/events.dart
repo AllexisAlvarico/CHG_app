@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+final Uri _launchGDrive = Uri(
+    scheme: 'https',
+    path: "www.drive.google.com/open?id=1KmKZYq7qKu7qPfU0JUtJzMQDDXzMmua3");
 
 class EventsPage extends StatefulWidget {
   @override
@@ -25,6 +30,7 @@ class _EventsPageState extends State<EventsPage> {
       body: ListView(
         children: <Widget>[
           Image(image: AssetImage("assets/images/events/events1.jpg")),
+          Divider(height: 10.0),
           Text(
             "CHG Events Calendar",
             textAlign: TextAlign.center,
@@ -53,7 +59,9 @@ class _EventsPageState extends State<EventsPage> {
               ),
             ],
           )),
-          Divider(height: 30.0),
+          Divider(height: 10.0),
+          Image(image: AssetImage("assets/images/events/events2.jpg")),
+          Divider(height: 10.0),
           Text(
             "Temporary Membership Rule",
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -84,6 +92,32 @@ class _EventsPageState extends State<EventsPage> {
           ),
           Divider(height: 15.0),
           Text(
+            "CHG Photography Policy",
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            "Taking digital photographs and video is reserved for paid " +
+                "CHG Members. The amount and nature should be such that it does" +
+                " not distract from the overall period-correct immersive nature" +
+                " of the event.The CHG does not allow members of the public to" +
+                " come to our private tactical battle events. The CHG does" +
+                " accommodate Veterans, and Film Students; but only after a" +
+                " formal request has been made in person to the board to the" +
+                " nature of their request. If you are interesting in attending" +
+                " one of our events your best option is to join one of our" +
+                " member units. Regardless who attends an event they must be in" +
+                " period clothing, with grooming and overall appearance meeting" +
+                " standards of the time period.",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          Divider(height: 15.0),
+          Text(
             "Different Event Types",
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
@@ -103,8 +137,131 @@ class _EventsPageState extends State<EventsPage> {
             ),
             textAlign: TextAlign.center,
           ),
+          Divider(height: 25.0),
+          Text(
+            "Private Tactical Battle",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          Divider(height: 5.0),
+          Text(
+            "Tactical or mock battles are designed to immerse the" +
+                " individual in the sights and sounds of World War" +
+                " II combat. The purpose is not to recreate war but" +
+                " to give the individual the opportunity to have a" +
+                " glimpse at what the average combat soldier may have" +
+                " experienced. This is all done with real and reproduction" +
+                " gear, clothing, and weapons.\n\nThe California Historical" +
+                " Group stages several battles through the year. In addition" +
+                " to D-Day / Europe, we host several events set in the" +
+                " Russian Front, the Pacific, North Africa / Italy, and more." +
+                " In order for this to happen, CHG membership includes" +
+                " a wide range of American, German, Red Army, Japanese," +
+                " Italian, and Commonwealth units.\n\nThe CHG showcases the" +
+                " only West Coast Regional event -- a large scale battle" +
+                " involving both Allied and Axis armor and infantry units." +
+                " 250-300 reenactors from all over the Western United States" +
+                " and beyond regularly attend the annual battle at George" +
+                " Air Force Base.  Armor includes American and German tanks" +
+                " -- not just one on each side, but sometimes two or" +
+                " three on a side. Each side will have half tracks;" +
+                " on the German side, you will often see several of" +
+                " these. In addition there are many jeeps, trucks," +
+                " and motorcycles in support. Aviation has been" +
+                " known to participate on both Axis and Allied" +
+                " side as well.\n\nBecause everyone is in period" +
+                " correct clothing and gear, and to add to immersion" +
+                " and the element of surprise and combat game play, these" +
+                " tactical battles are private: we do not allow members of" +
+                " the public to come and watch. It would harm the immersion" +
+                " and sense of realness that reenactors work so hard to" +
+                " recreate. The public can however see scaled-down public" +
+                " battles at Living History events such as the Chino Air" +
+                " Show and at Marching Through History.",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          Divider(height: 15.0),
+          Text(
+            "Living History",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+            "These events are generally run by outside organizations not" +
+                " connected with the CHG. Living History in its specific" +
+                " sense is geared towards various reenactor groups" +
+                " throughout history who come together to showcase" +
+                " different historical eras: you will see groups" +
+                " which portray  The American Revolutionary War," +
+                " Civil War, World War I, Korean War, Roman," +
+                " etc.\n\nLiving history events showcase camps set up by the" +
+                " various groups to illustrate their research and" +
+                " dedication to a time period via the use of their" +
+                " unique equipment, artifacts, weapons, vehicles" +
+                " and other items to make themselves appear as though" +
+                " they have stepped out of a history book. Often these events" +
+                " include a scripted mock battle for the enjoyment of the" +
+                " attending audience.\n\nThe events are staged to allow the" +
+                " general public to tour the assembled units and groups," +
+                " allowing attendees to ask questions, see demonstrations," +
+                " and generally learn about the various time periods on" +
+                " display.\n\nLiving History is a broad category and also" +
+                " includes other venues involving the public, such as Air" +
+                " Shows, Gun Shows, Parades. Veteran Events, Memorial" +
+                " Services, etc. ",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          Divider(height: 30.0),
+          Text(
+            "Minimum Age Policy for Tactical Events:",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          Divider(height: 10.0, color: Colors.transparent),
+          Text(
+            "The preferred age for a regular member is 18 years\n" +
+                " of age; a member less than 18 years of age may be\n" +
+                " admitted to a tactical battle event if they are\n" +
+                " accompanied by a parent or legal guardian and\n" +
+                " have a waiver of liability (click the icon below)\n" +
+                " signed by such parent or guardian\n" +
+                " and submitted to the Membership Chairman prior\n" +
+                " to such re-enactment. A legal parent or guardian\n" +
+                " must be present with the minor during the event.\n" +
+                "In no situation, however, may anyone under the age\n" +
+                " of 15 be admitted to tactical events.",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Divider(height: 15.0),
+          GestureDetector(
+              onTap: () => _launchURL(_launchGDrive.toString()),
+              child: ClipRRect(
+                child: Image.asset(
+                  "assets/images/events/EmbeddedImage.png",
+                  height: 250.0,
+                ),
+              )),
+          Divider(height: 30.0),
         ],
       ), // temp
     );
   }
 }
+
+void _launchURL(_url) async =>
+    await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
