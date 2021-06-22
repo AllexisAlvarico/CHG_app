@@ -16,6 +16,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
         ),
         body: SingleChildScrollView(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Image.asset("assets/images/hq-picture.png"),
               const Divider(
@@ -24,14 +25,14 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
               ),
               createText(
                   "Administration",
-                  TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                  TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                   TextAlign.center),
               createText("Board Meeting: Sunday, 26 July 2021",
-                  TextStyle(fontSize: 16), TextAlign.left),
+                  TextStyle(fontSize: 16), TextAlign.center),
               createText("• Next Meeting: Open to CHG members and guests",
                   TextStyle(fontSize: 14), TextAlign.left),
               createText(
-                  "• Location: This meeting will be held online via Discord.\nContact your Unit Leader for information.",
+                  "• Location: This meeting will be held online via Discord. Contact your Unit Leader for information.",
                   TextStyle(fontSize: 14),
                   TextAlign.left),
               createText("• Time: 1000 - 1300", TextStyle(fontSize: 14),
@@ -46,20 +47,16 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                   TextAlign.center),
               createText(
                   "Member dues are payable the first of each year. Dues should be paid direct online or through your Unit Leader to the CHG. Individual Units may have their own unit fees on top of CHG dues.\n\n" +
-                      "Only CHG members are allowed to attend events; but for new members we make accommodations by not collecting your 25 dollars fee until your second event. You will still need to pay that event's battle fee, which run between 25 dollars and 40 dollars\n\n" +
+                      "Only CHG members are allowed to attend events; but for new members we make accommodations by not collecting your 25 dollars fee until your second event. You will still need to pay that event's battle fee, which run between 25 dollars and 40 dollars.\n\n" +
                       "Returning members must be paid up on or before the first battle of each year. If not, CHG dues (or temporary dues) must be paid before they are able to participate in an event. Those members not paid current by the first battle will have their names listed as delinquent until which time they are paid. There is no prorating of existing or returning CHG membership dues.\n\n" +
-                      "  Returning members must be paid up on or before the first battle of each year. If not, CHG dues (or temporary dues) must be paid before they are able to participate in an event. Those members not paid current by the first battle will have their names listed as delinquent until which time they are paid. There is no prorating of existing or returning CHG membership dues.\n\n",
+                      "To pay your dues Online click the 'pay dues' icon below:\n\n",
                   TextStyle(fontSize: 14),
-                  TextAlign.center),
+                  TextAlign.left),
               Image.asset("assets/images/paydues.jpg"),
               const Divider(
                 height: 5,
                 thickness: 2,
               ),
-              createText(
-                  "Paperworks",
-                  TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                  TextAlign.center),
             ],
           ),
         ));
@@ -67,9 +64,13 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
 }
 
 createText(String text, TextStyle style, TextAlign position) {
-  return Text(
-    text,
-    style: style,
-    textAlign: position,
-  );
+  return SizedBox(
+      width: double.infinity,
+      child: Container(
+          margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0),
+          child: Text(
+            text,
+            style: style,
+            textAlign: position,
+          )));
 }
