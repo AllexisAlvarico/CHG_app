@@ -1,6 +1,7 @@
 import 'package:chg/pdfView.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:chg/url_functions.dart';
 
 class AboutUsPage extends StatelessWidget {
   final String bodyText =
@@ -10,27 +11,6 @@ class AboutUsPage extends StatelessWidget {
       "Written and edited by CHG members for CHG members, find issues by clicking on the covers below:";
   final String footerText =
       " The CHG, founded in 1979 and incorporated in 1992, is a non-profit organization that is recognized by the Department of Defense as a World War Two educational and reenactment organization.\n\n The CHG’s is a non-political organization whose sole purpose is to preserve World War Two history through uniform, equipment and vehicle restorations, static displays, and historical reenactments.";
-
-  // launch email
-  void launchInEmail(String email) async {
-    if (await canLaunch("mailto:$email")) {
-      await launch("mailto:$email");
-    } else {
-      throw 'Could not launch email';
-    }
-  }
-
-  // launch url in browser
-  void launchInBrowser(String url) async {
-    if (await canLaunch(url)) {
-      await launch(
-        url,
-        enableJavaScript: true,
-      );
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 
   const AboutUsPage({Key? key}) : super(key: key);
   @override
