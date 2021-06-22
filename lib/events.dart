@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 final Uri _launchGDrive = Uri(
     scheme: 'https',
-    path: "www.drive.google.com/open?id=1KmKZYq7qKu7qPfU0JUtJzMQDDXzMmua3");
+    path: "www.drive.google.com/file/d/1KmKZYq7qKu7qPfU0JUtJzMQDDXzMmua3/view");
 
 class EventsPage extends StatefulWidget {
   @override
