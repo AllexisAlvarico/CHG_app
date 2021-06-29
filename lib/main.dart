@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:chg/screens/home_screen.dart';
+import 'screens/events.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 void main() {
@@ -28,8 +29,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         'home': (context) => HomeScreen(),
-        /* 'videos': (context) => Events(),
-        'settings': (context) => Headquarters() */
+        'Events': (context) => EventsPage(),
+        /* 'settings': (context) => Headquarters() */
       },
     );
   }

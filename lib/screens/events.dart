@@ -1,3 +1,4 @@
+import 'package:chg/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,10 +16,6 @@ class _EventsPageState extends State<EventsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true, // allows use of back button
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context, false)),
         title: Text(
           "Events",
           style: TextStyle(
@@ -27,6 +24,7 @@ class _EventsPageState extends State<EventsPage> {
               fontFamily: "Futura"),
         ),
       ),
+      drawer: SideDrawer(),
       body: ListView(
         children: <Widget>[
           Image(image: AssetImage("assets/images/events/events1.jpg")),

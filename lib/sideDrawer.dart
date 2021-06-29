@@ -13,7 +13,7 @@ class SideDrawer extends StatelessWidget {
               UserAccountsDrawerHeader(
                 accountEmail: Text('test@gmail.com'),
                 accountName: Text('Test'),
-                otherAccountsPictures: [Icon(Icons.home), Icon(Icons.ac_unit)],
+                otherAccountsPictures: [Icon(Icons.home)],
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(
                       'https://i7.pngguru.com/preview/633/903/703/hey-you-pikachu-pokemon-go-ash-ketchum-pikachu.jpg'),
