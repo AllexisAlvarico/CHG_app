@@ -29,7 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   url_launcher: ^6.0.6
-
+  advance_pdf_viewer: ^2.0.0
   # Svg plug-in which allows svg images to be embedded in background of apps
   flutter_svg: ^0.22.0
 
@@ -55,6 +55,7 @@ flutter:
     - assets/images/
     - assets/images/events/
     - assets/images/Home/
+    - assets/images/Home/Newsletters/
     - assets/SVG/
   # To add assets to your application, add an assets section, like this:
   # assets:
