@@ -51,7 +51,13 @@ class AxisPage extends StatelessWidget {
         imageLink: "assets/japanese_units/unit2.JPG",
         name: "Hasegawa Shoutai",
         leaderName: "Ellie Chang, Unit Leader",
-        email: "hasegawashoutai@gmail.com"),
+        email: "hasegawashoutai@gmail.com",
+        child: TextButton(
+          onPressed: () async {
+            launchInBrowser("https://www.facebook.com/HasegawaShoutai/");
+          },
+          child: Text("Facebook Group"),
+        )),
   ];
 
   AxisPage({Key? key}) : super(key: key);
