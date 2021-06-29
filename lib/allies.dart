@@ -4,24 +4,48 @@ import 'package:chg/units_button.dart';
 class AlliesPage extends StatelessWidget {
   // american data
   final List<UnitData> americanData = [
-    UnitData(imageLink: "assets/american_units/unit1.jpg"),
-    UnitData(imageLink: "assets/american_units/unit2.JPG"),
-    UnitData(imageLink: "assets/american_units/unit3.JPG"),
-    UnitData(imageLink: "assets/american_units/unit4.JPG"),
-    UnitData(imageLink: "assets/american_units/unit5.JPG"),
-    UnitData(imageLink: "assets/american_units/unit6.JPG"),
+    UnitData(
+        imageLink: "assets/american_units/unit1.jpg",
+        urlLink: "https://sites.google.com/site/2ndarmoredchg/"),
+    UnitData(
+        imageLink: "assets/american_units/unit2.JPG",
+        urlLink: "https://sites.google.com/site/chg35th/"),
+    UnitData(
+        imageLink: "assets/american_units/unit3.JPG",
+        urlLink: "https://www.2ndidmanchus.org/"),
+    UnitData(
+        imageLink: "assets/american_units/unit4.JPG",
+        name: "45th Field Hospital",
+        email: "SignorinaL@aol.com"),
+    UnitData(
+        imageLink: "assets/american_units/unit5.JPG",
+        urlLink: "https://www.506thrps.com/"),
+    UnitData(
+        imageLink: "assets/american_units/unit6.JPG",
+        urlLink:
+            "https://anthony4795.wixsite.com/3rdplatoon?fbclid=IwAR2b1rLtbXLQ3Gnsp8v3FKlwpbBb9hNzRzDk3WbvQcxyPxmkhe8QAtMr0Ss"),
   ];
 
   // british data
   final List<UnitData> britishData = [
-    UnitData(imageLink: "assets/british_units/unit1.JPG"),
-    UnitData(imageLink: "assets/british_units/unit2.JPG"),
+    UnitData(
+        imageLink: "assets/british_units/unit1.JPG",
+        urlLink: "http://www.lrdg.org/"),
+    UnitData(
+        imageLink: "assets/british_units/unit2.JPG",
+        urlLink: "http://www.1stairborne.com/"),
   ];
 
   // red army data
   final List<UnitData> redArmyData = [
-    UnitData(imageLink: "assets/red_army_units/unit1.JPG"),
-    UnitData(imageLink: "assets/red_army_units/unit2.JPG"),
+    UnitData(
+        imageLink: "assets/red_army_units/unit1.JPG",
+        urlLink: "http://150thrifledvrkkareenacted.homestead.com/index.html"),
+    UnitData(
+      imageLink: "assets/red_army_units/unit2.JPG",
+      urlLink:
+          "http://www.70thguards.com/", // this website is not active anymore
+    )
   ];
 
   AlliesPage({Key? key}) : super(key: key);

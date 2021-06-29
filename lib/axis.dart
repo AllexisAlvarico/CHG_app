@@ -1,19 +1,57 @@
+import 'package:chg/url_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/units_button.dart';
 
 class AxisPage extends StatelessWidget {
   // german data
   final List<UnitData> germanData = [
-    UnitData(imageLink: "assets/german_units/unit1.JPG"),
-    UnitData(imageLink: "assets/german_units/unit2.JPG"),
-    UnitData(imageLink: "assets/german_units/unit3.JPG"),
-    UnitData(imageLink: "assets/german_units/unit4.JPG"),
+    UnitData(
+        imageLink: "assets/german_units/unit1.JPG",
+        urlLink: "http://www.12hj.com/"),
+    UnitData(
+        imageLink: "assets/german_units/unit2.JPG",
+        name: "2nd Fallschirmjäger",
+        leaderName: "Steve Woodward, unit leader: (619) 847-0263",
+        email: "rykersdad@hotmail.com"),
+    UnitData(
+        imageLink: "assets/german_units/unit3.JPG",
+        urlLink: "http://www.21stpanzerdivision.com/"),
+    UnitData(
+        imageLink: "assets/german_units/unit4.JPG",
+        name: "98th Gebirgsjäger",
+        leaderName: "Ludwig Prucker, unit leader",
+        email: "GJR98@yahoo.com",
+        child: Container(
+          margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
+          child: Text(
+            "Call: Otto Steiner (951) 255-2509",
+            style: TextStyle(
+              fontSize: 16,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        )),
   ];
 
   // japanese data
   final List<UnitData> japaneseData = [
-    UnitData(imageLink: "assets/japanese_units/unit1.JPG"),
-    UnitData(imageLink: "assets/japanese_units/unit2.JPG"),
+    UnitData(
+        imageLink: "assets/japanese_units/unit1.JPG",
+        name: "2nd Sendai",
+        leaderName: "Steve Woodward, unit leader: (619) 847-0263",
+        email: "rykersdad@hotmail.com",
+        child: TextButton(
+          onPressed: () async {
+            launchInBrowser(
+                "http://www.google.com/url?q=http%3A%2F%2Fgroups.yahoo.com%2Fgroup%2F2ndSendai%2F&sa=D&sntz=1&usg=AFQjCNFKqkEdmTZhojsxt6aaW13ShzFjbw");
+          },
+          child: Text("Yahoo Chat Group"),
+        )),
+    UnitData(
+        imageLink: "assets/japanese_units/unit2.JPG",
+        name: "Hasegawa Shoutai",
+        leaderName: "Ellie Chang, Unit Leader",
+        email: "hasegawashoutai@gmail.com"),
   ];
 
   AxisPage({Key? key}) : super(key: key);

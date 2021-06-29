@@ -5,7 +5,7 @@ void launchInEmail(String email) async {
   if (await canLaunch("mailto:$email")) {
     await launch("mailto:$email");
   } else {
-    throw 'Could not launch email';
+    throw 'Could not launch email: $email';
   }
 }
 
@@ -17,6 +17,6 @@ void launchInBrowser(String url) async {
       enableJavaScript: true,
     );
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launch: $url';
   }
 }

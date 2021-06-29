@@ -1,4 +1,5 @@
 import 'package:chg/about_us.dart';
+import 'package:chg/unit_contact.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/url_functions.dart';
 
@@ -16,8 +17,12 @@ class UnitsButton extends StatelessWidget {
       onTap: () async {
         unitData.urlLink != null
             ? launchInBrowser(unitData.urlLink!)
-            : Navigator.push(context,
-                MaterialPageRoute(builder: (context) => AboutUsPage())); // temp
+            : Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => UnitContactPage(
+                          data: unitData,
+                        )));
       },
       child: Card(
         child: Image.asset(
@@ -31,8 +36,20 @@ class UnitsButton extends StatelessWidget {
 
 // representation of the data neccessasary for the units button widget
 class UnitData {
+  // optional data can be stored in case if the unit doesn't have a website
   String? urlLink;
+  String? name;
+  String? leaderName;
+  String? email;
+  Widget? child;
+
   String imageLink;
 
-  UnitData({this.urlLink, required this.imageLink});
+  UnitData(
+      {this.urlLink,
+      this.name,
+      this.leaderName,
+      this.email,
+      this.child,
+      required this.imageLink});
 }
