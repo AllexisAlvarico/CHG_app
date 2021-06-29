@@ -26,24 +26,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: 0, // this will be set when a new tab is tapped
-        items: [
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.event),
-            label: 'Events',
-          ),
-          BottomNavigationBarItem(
-              icon: new Icon(Icons.work), label: 'Headquarters'),
-          BottomNavigationBarItem(
-              icon: new Icon(Icons.person), label: 'About us'),
-        ],
-      ),
       body: Stack(
         children: <Widget>[
           Container(
