@@ -29,7 +29,7 @@ class SideDrawer extends StatelessWidget {
               ),
               ListTile(
                 title: Text('Events'),
-                leading: Icon(Icons.personal_video),
+                leading: Icon(Icons.event),
                 onTap: () => Navigator.pushNamed(
                   context,
                   'Events',
@@ -37,7 +37,7 @@ class SideDrawer extends StatelessWidget {
               ),
               ListTile(
                 title: Text('Headquarters'),
-                leading: Icon(Icons.settings),
+                leading: Icon(Icons.hotel),
                 onTap: () => Navigator.pushNamed(
                   context,
                   'Headquarters',

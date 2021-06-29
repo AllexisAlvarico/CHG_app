@@ -1,3 +1,4 @@
+import 'package:chg/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -19,13 +20,8 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text("HomePage"),
         backgroundColor: Color(0xFF303033),
-        leading: GestureDetector(
-          onTap: () {/* Write listener code here */},
-          child: Icon(
-            Icons.menu, // add custom icons also
-          ),
-        ),
       ),
+      drawer: SideDrawer(),
       body: Stack(
         children: <Widget>[
           Container(
