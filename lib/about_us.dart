@@ -1,6 +1,5 @@
 import 'package:chg/pdfView.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:chg/url_functions.dart';
 
 class AboutUsPage extends StatelessWidget {
@@ -75,22 +74,22 @@ class AboutUsPage extends StatelessWidget {
                     child: Row(
                       children: [
                         PdfThumnnailButton(
-                          thumbnail: "assets/images/the_front_one.png",
+                          thumbnail: "assets/images/the_front1.png",
                           pdf:
                               "http://historical.vs-hp.org/external/The%20Front%20Issue%201.pdf",
                         ),
                         PdfThumnnailButton(
-                          thumbnail: "assets/images/the_front_two.png",
+                          thumbnail: "assets/images/the_front2.png",
                           pdf:
                               "http://historical.vs-hp.org/external/The%20Front%20Issue%202.pdf",
                         ),
                         PdfThumnnailButton(
-                          thumbnail: "assets/images/the_front_three.png",
+                          thumbnail: "assets/images/the_front3.png",
                           pdf:
                               "http://historical.vs-hp.org/external/The%20Front%20Issue%203.pdf",
                         ),
                         PdfThumnnailButton(
-                          thumbnail: "assets/images/the_front_four.png",
+                          thumbnail: "assets/images/the_front4.png",
                           pdf:
                               "http://historical.vs-hp.org/external/The%20Front%20Issue%204.pdf",
                         ),

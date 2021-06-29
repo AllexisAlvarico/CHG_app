@@ -20,7 +20,7 @@ class UnitsButton extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => AboutUsPage())); // temp
       },
       child: Card(
-        child: Image.network(
+        child: Image.asset(
           unitData.imageLink,
           fit: BoxFit.fill,
         ),

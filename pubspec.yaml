@@ -49,6 +49,11 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/american_units/
+    - assets/british_units/
+    - assets/german_units/
+    - assets/japanese_units/
+    - assets/red_army_units/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
