@@ -1,3 +1,5 @@
+import 'package:chg/events.dart';
+import 'package:chg/join.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/home_screen.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
         splash: Image.asset(
           'assets/images/Home/Logo.png',
         ),
-        nextScreen: HomeScreen(),
+        nextScreen: JoinPage(),
         splashTransition: SplashTransition.rotationTransition,
         backgroundColor: Color(0xFFE1DFD8),
       ),
