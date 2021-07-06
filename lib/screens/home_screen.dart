@@ -2,15 +2,16 @@ import 'package:chg/utilities/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:chg/utilities/pdfView.dart';
+import '../globals.dart';
 
 class HomePage extends StatelessWidget {
   final String bodyText =
-      " The California Historical Group is a 501c3 non-profit organization dedicated to preserving the memory of and educating the public on the influential period of time during World War II.\n\n Founded in 1979, this group has remained an active leader in West Coast WWII reenacting and has participated in myriad events such as private tactical battles, public outreach and education at museums and living history events; as well as in commemorative events such as memorials, parades, and various other ceremonies.\n\n CHG member groups do their best in portraying a wide variety of participants in WWII as soldiers of various nationalities and specialties, and each member presents a degree of research and understanding into the conflict that only improves with each event and strengthens the community as a whole.\n\n On our units page, you will find links to our current units and their contact information. If you wish to join the CHG, make contact with one of our units that interests you most and they will help you decide what you will need to attend our next event. If you are interested in general information regarding the CHG, please contact our public relations officer.";
+      "The California Historical Group is a 501c3 non-profit organization dedicated to preserving the memory of and educating the public on the influential period of time during World War II.\n\nFounded in 1979, this group has remained an active leader in West Coast WWII reenacting and has participated in myriad events such as private tactical battles, public outreach and education at museums and living history events; as well as in commemorative events such as memorials, parades, and various other ceremonies.\n\nCHG member groups do their best in portraying a wide variety of participants in WWII as soldiers of various nationalities and specialties, and each member presents a degree of research and understanding into the conflict that only improves with each event and strengthens the community as a whole.\n\nOn our units page, you will find links to our current units and their contact information. If you wish to join the CHG, make contact with one of our units that interests you most and they will help you decide what you will need to attend our next event. If you are interested in general information regarding the CHG, please contact our public relations officer.";
   final String newsletterHeadingText = "The CHG has a newsletter: The Front.";
   final String newsletterText =
       "Written and edited by CHG members for CHG members, find issues by clicking on the covers below:";
   final String footerText =
-      " The CHG, founded in 1979 and incorporated in 1992, is a non-profit organization that is recognized by the Department of Defense as a World War Two educational and reenactment organization.\n\n The CHG’s is a non-political organization whose sole purpose is to preserve World War Two history through uniform, equipment and vehicle restorations, static displays, and historical reenactments.";
+      "The CHG, founded in 1979 and incorporated in 1992, is a non-profit organization that is recognized by the Department of Defense as a World War Two educational and reenactment organization.\n\nThe CHG’s is a non-political organization whose sole purpose is to preserve World War Two history through uniform, equipment and vehicle restorations, static displays, and historical reenactments.";
 
   // launch email
   void launchInEmail(String email) async {
@@ -35,10 +36,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    /* var size = MediaQuery.of(context).size; */
 
-    var cardTextStyle = TextStyle(
-        fontFamily: "Montserrat Regular", fontSize: 14, color: Colors.black);
+    /* ! var cardTextStyle = TextStyle(
+        fontFamily: "Montserrat Regular", fontSize: 14, color: Colors.black); */
 
     return Scaffold(
       backgroundColor: Color(0xFFE1DFD8),
@@ -50,22 +51,20 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              // spacing between appbar and logo
-              height: 50,
+            const Divider(
+              height: spaceSize,
             ),
             Image.asset(
                 // logo grabbed from the main website, have to reduce quality
                 // as it introduced lag
                 "assets/images/Home/Home.png"),
-            SizedBox(
-              // spacing between logo and body text
-              height: 50,
+            const Divider(
+              height: spaceSize,
             ),
-            CustomContainer(
-              // body of the page with white background
-              text: bodyText,
-              backgroundColor: Colors.white,
+            createText(
+              bodyText,
+              TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+              TextAlign.left,
             ),
             Container(
               // newsletter divider with cream background
@@ -77,24 +76,20 @@ class HomePage extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Text(
-                    // newsletter heading
+                  createText(
                     newsletterHeadingText,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
+                    TextStyle(
+                        fontSize: regularTextFontSize, color: Colors.black),
+                    TextAlign.center,
                   ),
-                  SizedBox(
-                    // spacing between newletter heading and body
-                    height: 10,
+                  const Divider(
+                    height: spaceSize,
                   ),
-                  Text(
-                    // newsletter body
+                  createText(
                     newsletterText,
-                    style: TextStyle(
-                      fontSize: 18,
-                    ),
+                    TextStyle(
+                        fontSize: regularTextFontSize, color: Colors.black),
+                    TextAlign.center,
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -130,103 +125,10 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            CustomContainer(
-              // footer with black background
-              text: footerText,
-              backgroundColor: Color(0xFF303033), // black color
-              child: Column(
-                children: [
-                  SizedBox(
-                    // spacing between footer text and contact us
-                    height: 50,
-                  ),
-                  Text(
-                    "Contact Us",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(
-                    // spacing between contact us heading and links
-                    height: 20,
-                  ),
-                  Row(
-                    // two icon buttons
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CustomIconButton(
-                        // president email
-                        onTap: () async {
-                          launchInEmail("thomas.metzger@gmail.com");
-                        },
-                        icon: Icon(
-                          Icons.email_outlined,
-                          color: Colors.white,
-                        ),
-                        label: Text("CHG PRESIDENT",
-                            style: TextStyle(
-                              color: Colors.white,
-                            )),
-                      ),
-                      CustomIconButton(
-                        // webmaster email
-                        onTap: () async {
-                          launchInEmail("adminz@chgww2.net");
-                        },
-                        icon: Icon(
-                          Icons.email_outlined,
-                          color: Colors.white,
-                        ),
-                        label: Text("CHG WEBMASTER",
-                            style: TextStyle(
-                              color: Colors.white,
-                            )),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    // spacing between the rows containing icon buttons
-                    height: 25,
-                  ),
-                  Row(
-                    // two icon buttons
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CustomIconButton(
-                        // public affairs email
-                        onTap: () async {
-                          launchInEmail("thomas.metzger@gmail.com");
-                        },
-                        icon: Icon(
-                          Icons.email_outlined,
-                          color: Colors.white,
-                        ),
-                        label: Text("CHG PUBLIC AFFAIRS",
-                            style: TextStyle(
-                              color: Colors.white,
-                            )),
-                      ),
-                      CustomIconButton(
-                        // facebook browser link
-                        onTap: () async {
-                          launchInBrowser(
-                              "https://www.facebook.com/groups/19634229966/");
-                        },
-                        icon: Icon(
-                          Icons.facebook_outlined,
-                          color: Colors.white,
-                        ),
-                        label: Text("CHG ON FACEBOOK",
-                            style: TextStyle(
-                              color: Colors.white,
-                            )),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+            createText(
+              footerText,
+              TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+              TextAlign.center,
             ),
           ],
         ),

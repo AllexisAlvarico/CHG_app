@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'globals.dart';
+import '../globals.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 final Uri _launchAUnit1 = Uri(scheme: 'https', path: "www.2ndidmanchus.org");
@@ -47,19 +47,6 @@ class _JoinPageState extends State<JoinPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true, // allows use of back button
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context, false)),
-        title: createText(
-            "Join",
-            TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Futura"),
-            TextAlign.left),
-      ),
       body: ListView(
         children: [
           Image(image: AssetImage("assets/images/Join/JoinHeader.JPG")),
@@ -67,13 +54,16 @@ class _JoinPageState extends State<JoinPage> {
             child: Column(
               children: [
                 const Divider(
-                  height: 5,
+                  height: spaceSize,
                   thickness: 2,
                 ),
-                createText("BECOMING A WWII REENACTOR", TextStyle(fontSize: 26),
-                    TextAlign.center),
+                createText(
+                  "BECOMING A WWII REENACTOR",
+                  TextStyle(fontSize: headerTextFontSize),
+                  TextAlign.center,
+                ),
                 const Divider(
-                  height: 5,
+                  height: spaceSize,
                   thickness: 2,
                 ),
                 createText(
@@ -97,7 +87,7 @@ class _JoinPageState extends State<JoinPage> {
                       " If you find a unit which holds interest to you, feel free to contact the recruiting officer for that unit and inquire" +
                       " about things such as unit authenticity standards, accepted vendors, and requirement for membership within that unit.\n\n",
                   TextStyle(
-                    fontSize: 16,
+                    fontSize: regularTextFontSize,
                   ),
                   TextAlign.left,
                 ),
@@ -108,11 +98,14 @@ class _JoinPageState extends State<JoinPage> {
               color: Colors.grey[400],
               child: Column(
                 children: [
-                  createText("\n*These units are second impression units.",
-                      TextStyle(fontSize: 20), TextAlign.center),
+                  createText(
+                      "\n*These units are second impression units.",
+                      TextStyle(fontSize: alertSize, color: Colors.black),
+                      TextAlign.center),
                   createText(
                     "\nAmerican Units",
-                    TextStyle(fontSize: 26),
+                    TextStyle(
+                        fontSize: headerTextFontSize, color: Colors.black),
                     TextAlign.center,
                   ),
                   GestureDetector(
@@ -120,8 +113,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n2nd Infantry Division",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -131,8 +125,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n35th Infantry Division",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -142,8 +137,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n101st Airborne",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -153,8 +149,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n2nd Armored Division",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -164,8 +161,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n3rd Platoon",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -175,15 +173,19 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n45th Field Hospital",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
                   ),
                   createText(
                     "\nRed Army Units",
-                    TextStyle(fontSize: 26),
+                    TextStyle(
+                      fontSize: headerTextFontSize,
+                      color: Colors.black,
+                    ),
                     TextAlign.center,
                   ),
                   GestureDetector(
@@ -191,8 +193,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n150th Rifles",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -200,13 +203,17 @@ class _JoinPageState extends State<JoinPage> {
                   createText(
                     "\n70th Guards",
                     TextStyle(
-                      fontSize: 18,
+                      fontSize: alertSize,
+                      color: Colors.black,
                     ),
                     TextAlign.center,
                   ),
                   createText(
                     "\nBritish Unit",
-                    TextStyle(fontSize: 26),
+                    TextStyle(
+                      fontSize: headerTextFontSize,
+                      color: Colors.black,
+                    ),
                     TextAlign.center,
                   ),
                   GestureDetector(
@@ -214,15 +221,19 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n1st Airborne",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
                   ),
                   createText(
                     "\nCommonwealth Unit",
-                    TextStyle(fontSize: 26),
+                    TextStyle(
+                      fontSize: headerTextFontSize,
+                      color: Colors.black,
+                    ),
                     TextAlign.center,
                   ),
                   GestureDetector(
@@ -230,8 +241,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\nLong Range Desert Group",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -239,13 +251,17 @@ class _JoinPageState extends State<JoinPage> {
                   createText(
                     "\nQueen's Own Rifles of Canada*",
                     TextStyle(
-                      fontSize: 18,
+                      fontSize: alertSize,
+                      color: Colors.black,
                     ),
                     TextAlign.center,
                   ),
                   createText(
                     "\nGerman Units",
-                    TextStyle(fontSize: 26),
+                    TextStyle(
+                      fontSize: headerTextFontSize,
+                      color: Colors.black,
+                    ),
                     TextAlign.center,
                   ),
                   GestureDetector(
@@ -253,8 +269,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n12th SS Panzerdivision",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -262,21 +279,22 @@ class _JoinPageState extends State<JoinPage> {
                   GestureDetector(
                     onTap: () => _launchURL(_launchGUnit2.toString()),
                     child: createText(
-                      "\n21st Panzerdivision",
-                      TextStyle(
-                        fontSize: 18,
-                        decoration: TextDecoration.underline,
-                      ),
-                      TextAlign.center,
-                    ),
+                        "\n21st Panzerdivision",
+                        TextStyle(
+                          fontSize: alertSize,
+                          decoration: TextDecoration.underline,
+                          color: Colors.black,
+                        ),
+                        TextAlign.center),
                   ),
                   GestureDetector(
                     onTap: () => _launchURL(_launchGUnit3.toString()),
                     child: createText(
                       "\n2nd Fallschirmjagers",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -286,15 +304,19 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\n98th Gebirgsjager Regiment",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
                   ),
                   createText(
                     "\nJapanese Unit",
-                    TextStyle(fontSize: 26),
+                    TextStyle(
+                      fontSize: headerTextFontSize,
+                      color: Colors.black,
+                    ),
                     TextAlign.center,
                   ),
                   GestureDetector(
@@ -302,8 +324,9 @@ class _JoinPageState extends State<JoinPage> {
                     child: createText(
                       "\nHasegawa Shoutai*\n",
                       TextStyle(
-                        fontSize: 18,
+                        fontSize: alertSize,
                         decoration: TextDecoration.underline,
+                        color: Colors.black,
                       ),
                       TextAlign.center,
                     ),
@@ -322,7 +345,7 @@ class _JoinPageState extends State<JoinPage> {
                 createText(
                   "\nAnnouncement",
                   TextStyle(
-                    fontSize: 24,
+                    fontSize: headerTextFontSize,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -332,7 +355,7 @@ class _JoinPageState extends State<JoinPage> {
                   "\nThe new CHG payment system has arrived!" +
                       "\nClick through the image for more information and payment link.\n",
                   TextStyle(
-                    fontSize: 18,
+                    fontSize: regularTextFontSize,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
