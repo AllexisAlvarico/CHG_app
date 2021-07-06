@@ -80,40 +80,60 @@ class _DuesPageState extends State<DuesPage> {
                 ),
               )),
           Divider(
-            height: 40.0,
-            thickness: 2,
-          ),
-          createText(
-              "CHG dues are not required at your first event, but we ask you" +
-                  " to complete and turn in a Prospective Member Form to your unit" +
-                  " leader at your first event.\n\nPlease note: battle fees are" +
-                  " required at every event -- including your first one.",
-              TextStyle(fontSize: 16),
-              TextAlign.left),
-          Divider(
-            height: 40.0,
-            color: Colors.transparent,
-          ),
-          GestureDetector(
-              onTap: () => _launchURL(_launchRegister.toString()),
-              child: ClipRRect(
-                child: Image.asset(
-                  "assets/images/events/EmbeddedImage.png",
-                  height: 250.0,
-                ),
-              )),
-          Divider(
             height: 10.0,
-            color: Colors.transparent,
           ),
-          createText(
-              "Prospective Member Form",
-              TextStyle(fontSize: 14, fontStyle: FontStyle.italic),
-              TextAlign.center),
-          Divider(
-            height: 30.0,
-            color: Colors.transparent,
-          ),
+          Container(
+            color: Colors.grey[350],
+            child: Column(
+              children: [
+                Divider(
+                  height: 10.0,
+                ),
+                createText(
+                    "New Members",
+                    TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    TextAlign.center),
+                createText(
+                    "CHG dues are not required at your first event, but we ask you" +
+                        " to complete and turn in a Prospective Member Form to your unit" +
+                        " leader at your first event.\n\nPlease note: battle fees are" +
+                        " required at every event -- including your first one.",
+                    TextStyle(fontSize: 16, color: Colors.black),
+                    TextAlign.left),
+                Divider(
+                  height: 40.0,
+                  color: Colors.transparent,
+                ),
+                GestureDetector(
+                    onTap: () => _launchURL(_launchRegister.toString()),
+                    child: ClipRRect(
+                      child: Image.asset(
+                        "assets/images/events/EmbeddedImage.png",
+                        height: 275.0,
+                      ),
+                    )),
+                Divider(
+                  height: 10.0,
+                  color: Colors.transparent,
+                ),
+                createText(
+                    "Prospective Member Form",
+                    TextStyle(
+                        fontSize: 16,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    TextAlign.center),
+                Divider(
+                  height: 30.0,
+                  color: Colors.transparent,
+                ),
+              ],
+            ),
+          )
         ],
       ), // temp
     );
