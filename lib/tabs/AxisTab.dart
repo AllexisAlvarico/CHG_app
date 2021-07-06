@@ -1,3 +1,4 @@
+import 'package:chg/axis.dart';
 import 'package:flutter/material.dart';
 
 class AxisTab extends StatelessWidget {
@@ -7,9 +8,8 @@ class AxisTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text(
-          'Axis code goes here',
-          style: TextStyle(fontSize: 24, color: Colors.black),
+        child: Center(
+          child: AxisPage(),
         ),
       ),
     );
