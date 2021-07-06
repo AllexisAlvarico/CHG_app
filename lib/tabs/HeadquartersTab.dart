@@ -1,7 +1,6 @@
 import 'package:chg/screens/dues.dart';
 import 'package:chg/screens/headquarters.dart';
 import 'package:chg/screens/join.dart';
-import 'package:chg/utilities/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -22,11 +21,10 @@ class HeadquartersTab extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        backgroundColor: Color(0xffe1dfdb),
+        backgroundColor: Color(0xFFE1DFD8),
         appBar: AppBar(
-          automaticallyImplyLeading: false,
           title: Text("HQ"),
-          backgroundColor: Color(0xFF303033),
+          backgroundColor: Theme.of(context).primaryColor,
           bottom: TabBar(
             tabs: [
               Tab(
@@ -58,15 +56,3 @@ class HeadquartersTab extends StatelessWidget {
 
 void _launchURL(_url) async =>
     await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
-
-createText(String text, TextStyle style, TextAlign position) {
-  return SizedBox(
-      width: double.infinity,
-      child: Container(
-          margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0),
-          child: Text(
-            text,
-            style: style,
-            textAlign: position,
-          )));
-}

@@ -10,13 +10,13 @@ class SideDrawer extends StatelessWidget {
         child: Drawer(
           child: ListView(
             children: [
+              // This is a flutter premade widget
               UserAccountsDrawerHeader(
-                accountEmail: Text('test@gmail.com'),
-                accountName: Text('Test'),
+                accountEmail: Text(''),
+                accountName: Text(''),
                 otherAccountsPictures: [Icon(Icons.home)],
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      'https://i7.pngguru.com/preview/633/903/703/hey-you-pikachu-pokemon-go-ash-ketchum-pikachu.jpg'),
+                  backgroundImage: AssetImage('assets/images/Home/Home.png'),
                 ),
               ),
               ListTile(

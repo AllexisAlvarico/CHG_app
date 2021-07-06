@@ -35,10 +35,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    /* var size = MediaQuery.of(context).size; */
 
-    var cardTextStyle = TextStyle(
-        fontFamily: "Montserrat Regular", fontSize: 14, color: Colors.black);
+    /* ! var cardTextStyle = TextStyle(
+        fontFamily: "Montserrat Regular", fontSize: 14, color: Colors.black); */
 
     return Scaffold(
       backgroundColor: Color(0xFFE1DFD8),

@@ -48,7 +48,8 @@ class _JoinPageState extends State<JoinPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: SideDrawer(),
+      appBar: AppBar(),
+/*       drawer: SideDrawer(), */
       body: ListView(
         children: [
           Image(image: AssetImage("assets/images/Join/JoinHeader.JPG")),

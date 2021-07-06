@@ -20,8 +20,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffe1dfdb),
-        drawer: SideDrawer(),
+        backgroundColor: Color(0xFFE1DFD8),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
