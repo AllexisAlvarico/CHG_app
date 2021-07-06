@@ -1,8 +1,10 @@
+import 'package:chg/headquarters.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/screens/home_screen.dart';
 import 'package:chg/screens/test.dart';
 import 'screens/events.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'headquarters.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         splash: Image.asset(
           'assets/images/Home/Logo.png',
         ),
-        nextScreen: HomePage(),
+        nextScreen: HeadquarterPage(),
         splashTransition: SplashTransition.rotationTransition,
         backgroundColor: Color(0xFFE1DFD8),
       ),
