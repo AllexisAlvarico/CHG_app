@@ -27,6 +27,7 @@ class AxisPage extends StatelessWidget {
             "Call: Otto Steiner (951) 255-2509",
             style: TextStyle(
               fontSize: 16,
+              color: Colors.black,
             ),
             textAlign: TextAlign.center,
           ),
@@ -66,10 +67,6 @@ class AxisPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFE1DFDB), // cream color
-      appBar: AppBar(
-        title: Text("Axis"),
-        backgroundColor: Color(0xFF303033), // black color
-      ),
       body: SingleChildScrollView(
         // main scroller to scroll through all lists
         child: Center(
@@ -96,6 +93,7 @@ class AxisPage extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -135,10 +133,11 @@ class AxisPage extends StatelessWidget {
                   ),
                   Text(
                     // section heading
-                    "Japenese Units",
+                    "Japanese Units",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
+                      color: Colors.black,
                     ),
                   ),
                 ],

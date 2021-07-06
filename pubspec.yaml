@@ -30,7 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.0.6
   advance_pdf_viewer: ^2.0.0
-
+  
   # Svg plug-in which allows svg images to be embedded in background of apps
   flutter_svg: ^0.22.0
 
@@ -51,19 +51,18 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
   assets:
     - assets/
     - assets/images/
     - assets/images/events/
     - assets/images/Home/
     - assets/images/Join/
-    - assets/SVG/
+    - assets/images/Home/Newsletters/
     - assets/american_units/
     - assets/british_units/
     - assets/german_units/
     - assets/japanese_units/
     - assets/red_army_units/
+    - assets/images/Home/Newsletters/
 
 
