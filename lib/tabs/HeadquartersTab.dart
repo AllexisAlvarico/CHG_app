@@ -46,7 +46,7 @@ class HeadquartersTab extends StatelessWidget {
           children: [
             HeadquarterPage(),
             JoinPage(),
-            Dues(),
+            DuesPage(),
           ],
         ),
       ),

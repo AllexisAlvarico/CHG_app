@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         splash: Image.asset(
           'assets/images/Home/Logo.png',
         ),
-        nextScreen: DuesPage(),
+        nextScreen: HomePage(),
         splashTransition: SplashTransition.rotationTransition,
         backgroundColor: Color(0xFFE1DFD8),
       ),

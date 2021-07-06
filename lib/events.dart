@@ -32,52 +32,55 @@ class _EventsPageState extends State<EventsPage> {
         children: <Widget>[
           Image(image: AssetImage("assets/images/events/events1.jpg")),
           Container(
-            color: Colors.grey[400],
+            color: Colors.black,
             child: Column(
               children: [
-                Text(
+                createText(
                   "\nCHG Events Calendar",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
+                  TextStyle(
                       fontSize: headerTextFontSize,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                  TextAlign.center,
                 ),
-                Text(
+                createText(
                   "Note: All event dates are subject to change pending Covid-19 " +
                       "restrictions as issued by local authorities to the event sites.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: regularTextFontSize,
-                  ),
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+                  TextAlign.center,
                 ),
-                Divider(height: 15.0),
+                Divider(height: spaceSize),
                 Container(
                     child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text(
+                    createText(
                       "TACTICAL EVENTS\n2021\nAugust Storm at Cal City\n June 11 - 13\nSpring Awakening at Hill 559\nNovember",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: regularTextFontSize,
-                          fontWeight: FontWeight.bold),
+                      TextStyle(
+                        fontSize: regularTextFontSize,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      TextAlign.center,
                     ),
-                    Text(
+                    createText(
                       "PUBLIC EVENTS\n2021\n\nPlanes of Fame\nAirshow in Chino\n 30-31 Oct",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontSize: regularTextFontSize,
-                          fontWeight: FontWeight.bold),
+                      TextStyle(
+                        fontSize: regularTextFontSize,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      TextAlign.center,
                     ),
                   ],
                 )),
               ],
             ),
           ),
-          Divider(height: 20.0, thickness: 21.0, color: Colors.grey[400]),
+          Divider(height: spaceSize, thickness: 21.0, color: Colors.grey[400]),
           Image(image: AssetImage("assets/images/events/events2.jpg")),
           Divider(
-            height: 10.0,
+            height: spaceSize,
           ),
           createText(
               "Temporary Membership Rule",
@@ -85,7 +88,7 @@ class _EventsPageState extends State<EventsPage> {
                   fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 7.5,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -105,7 +108,7 @@ class _EventsPageState extends State<EventsPage> {
               TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             color: Colors.transparent,
           ),
           createText(
@@ -114,7 +117,7 @@ class _EventsPageState extends State<EventsPage> {
               TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -122,7 +125,7 @@ class _EventsPageState extends State<EventsPage> {
               TextStyle(
                   fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
-          Divider(height: 15.0, thickness: 2),
+          Divider(height: spaceSize, thickness: 2),
           createText(
               "Taking digital photographs and video is reserved for paid " +
                   "CHG Members. The amount and nature should be such that it does" +
@@ -139,7 +142,7 @@ class _EventsPageState extends State<EventsPage> {
               TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -148,7 +151,7 @@ class _EventsPageState extends State<EventsPage> {
                   fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -162,7 +165,7 @@ class _EventsPageState extends State<EventsPage> {
               TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -171,7 +174,7 @@ class _EventsPageState extends State<EventsPage> {
                   fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -213,7 +216,7 @@ class _EventsPageState extends State<EventsPage> {
               ),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           Text(
@@ -223,7 +226,7 @@ class _EventsPageState extends State<EventsPage> {
             textAlign: TextAlign.center,
           ),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -252,7 +255,7 @@ class _EventsPageState extends State<EventsPage> {
               TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -261,7 +264,7 @@ class _EventsPageState extends State<EventsPage> {
                   fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -278,7 +281,7 @@ class _EventsPageState extends State<EventsPage> {
                   " of 15 be admitted to tactical events.",
               TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
-          Divider(height: 15.0),
+          Divider(height: spaceSize),
           GestureDetector(
               onTap: () => _launchURL(_launchGDrive.toString()),
               child: ClipRRect(
@@ -288,7 +291,7 @@ class _EventsPageState extends State<EventsPage> {
                 ),
               )),
           Divider(
-            height: 15.0,
+            height: spaceSize,
           ),
         ],
       ), // temp
