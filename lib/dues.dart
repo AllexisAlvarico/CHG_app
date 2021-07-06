@@ -19,19 +19,6 @@ class _DuesPageState extends State<DuesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true, // allows use of back button
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context, false)),
-        title: Text(
-          "Dues",
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontFamily: "Futura"),
-        ),
-      ),
       body: ListView(
         children: <Widget>[
           Divider(height: 20.0),
