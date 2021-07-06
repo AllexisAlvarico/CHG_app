@@ -32,6 +32,7 @@ class UnitContactPage extends StatelessWidget {
                   data.name!,
                   style: TextStyle(
                     fontSize: 24,
+                    color: Colors.black,
                   ),
                   textAlign: TextAlign.center,
                 )
@@ -39,6 +40,7 @@ class UnitContactPage extends StatelessWidget {
           Divider(
             // divider between the unit name and leader name
             thickness: 5,
+            color: Color(0xFF303033), // black color
           ),
           SizedBox(
             height: 15,
@@ -49,6 +51,7 @@ class UnitContactPage extends StatelessWidget {
                   data.leaderName!,
                   style: TextStyle(
                     fontSize: 18,
+                    color: Colors.black,
                   ),
                   textAlign: TextAlign.center,
                 )
@@ -70,7 +73,12 @@ class UnitContactPage extends StatelessWidget {
                     Icons.email_outlined,
                     color: Colors.black,
                   ),
-                  label: Text("Email"),
+                  label: Text(
+                    "Email",
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
                 )
               : Container(),
         ],

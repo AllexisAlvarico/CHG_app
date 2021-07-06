@@ -1,4 +1,3 @@
-import 'package:chg/about_us.dart';
 import 'package:chg/unit_contact.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/url_functions.dart';

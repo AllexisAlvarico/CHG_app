@@ -1,3 +1,4 @@
+import 'package:chg/allies.dart';
 import 'package:flutter/material.dart';
 
 class AlliesTab extends StatelessWidget {
@@ -7,10 +8,7 @@ class AlliesTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Text(
-          'Allies Code goes here',
-          style: TextStyle(fontSize: 24, color: Colors.black),
-        ),
+        child: AlliesPage(),
       ),
     );
   }
