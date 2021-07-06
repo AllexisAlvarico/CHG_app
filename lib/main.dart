@@ -1,5 +1,6 @@
 import 'package:chg/headquarters.dart';
 import 'package:flutter/material.dart';
+import 'join.dart';
 import 'package:chg/screens/home_screen.dart';
 import 'package:chg/screens/test.dart';
 import 'screens/events.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         splash: Image.asset(
           'assets/images/Home/Logo.png',
         ),
-        nextScreen: HeadquarterPage(),
+        nextScreen: HomePage(),
         splashTransition: SplashTransition.rotationTransition,
         backgroundColor: Color(0xFFE1DFD8),
       ),

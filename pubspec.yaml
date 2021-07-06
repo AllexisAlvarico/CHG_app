@@ -56,6 +56,7 @@ flutter:
     - assets/images/
     - assets/images/events/
     - assets/images/Home/
+    - assets/images/Join/
     - assets/images/Home/Newsletters/
     - assets/american_units/
     - assets/british_units/
@@ -63,6 +64,5 @@ flutter:
     - assets/japanese_units/
     - assets/red_army_units/
     - assets/images/Home/Newsletters/
-    - assets/SVG/
 
 
