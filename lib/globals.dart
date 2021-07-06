@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 createText(String text, TextStyle style, TextAlign position) {
   return SizedBox(
-      width: double.infinity,
       child: Container(
           margin: const EdgeInsets.fromLTRB(spaceSize, 0.0, spaceSize, 0),
           child: Text(
