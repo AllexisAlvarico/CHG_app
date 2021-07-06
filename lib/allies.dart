@@ -54,10 +54,6 @@ class AlliesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFE1DFDB), // cream color
-      appBar: AppBar(
-        title: Text("Allies"),
-        backgroundColor: Color(0xFF303033), // black color
-      ),
       body: SingleChildScrollView(
         // main scroller to scroll through all lists
         child: Center(
@@ -84,6 +80,7 @@ class AlliesPage extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -127,6 +124,7 @@ class AlliesPage extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -170,6 +168,7 @@ class AlliesPage extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
+                      color: Colors.black,
                     ),
                   ),
                 ],

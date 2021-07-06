@@ -1,9 +1,9 @@
-import 'package:chg/custom_icon_button.dart';
-import 'package:chg/pdfView.dart';
+import 'package:chg/utilities/sideDrawer.dart';
 import 'package:flutter/material.dart';
-import 'package:chg/url_functions.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:chg/utilities/pdfView.dart';
 
-class AboutUsPage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   final String bodyText =
       " The California Historical Group is a 501c3 non-profit organization dedicated to preserving the memory of and educating the public on the influential period of time during World War II.\n\n Founded in 1979, this group has remained an active leader in West Coast WWII reenacting and has participated in myriad events such as private tactical battles, public outreach and education at museums and living history events; as well as in commemorative events such as memorials, parades, and various other ceremonies.\n\n CHG member groups do their best in portraying a wide variety of participants in WWII as soldiers of various nationalities and specialties, and each member presents a degree of research and understanding into the conflict that only improves with each event and strengthens the community as a whole.\n\n On our units page, you will find links to our current units and their contact information. If you wish to join the CHG, make contact with one of our units that interests you most and they will help you decide what you will need to attend our next event. If you are interested in general information regarding the CHG, please contact our public relations officer.";
   final String newsletterHeadingText = "The CHG has a newsletter: The Front.";
@@ -12,14 +12,41 @@ class AboutUsPage extends StatelessWidget {
   final String footerText =
       " The CHG, founded in 1979 and incorporated in 1992, is a non-profit organization that is recognized by the Department of Defense as a World War Two educational and reenactment organization.\n\n The CHG’s is a non-political organization whose sole purpose is to preserve World War Two history through uniform, equipment and vehicle restorations, static displays, and historical reenactments.";
 
-  const AboutUsPage({Key? key}) : super(key: key);
+  // launch email
+  void launchInEmail(String email) async {
+    if (await canLaunch("mailto:$email")) {
+      await launch("mailto:$email");
+    } else {
+      throw 'Could not launch email';
+    }
+  }
+
+  // launch url in browser
+  void launchInBrowser(String url) async {
+    if (await canLaunch(url)) {
+      await launch(
+        url,
+        enableJavaScript: true,
+      );
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
+    var cardTextStyle = TextStyle(
+        fontFamily: "Montserrat Regular", fontSize: 14, color: Colors.black);
+
     return Scaffold(
-      backgroundColor: Color(0xFFE1DFDB), // cream color
+      backgroundColor: Color(0xFFE1DFD8),
       appBar: AppBar(
-        title: Text("About Us"),        backgroundColor: Color(0xFF303033), // black color
+        title: Text("HomePage"),
+        backgroundColor: Theme.of(context).primaryColor,
       ),
+      drawer: SideDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -30,7 +57,7 @@ class AboutUsPage extends StatelessWidget {
             Image.asset(
                 // logo grabbed from the main website, have to reduce quality
                 // as it introduced lag
-                "assets/images/chg_logo.png"),
+                "assets/images/Home/Home.png"),
             SizedBox(
               // spacing between logo and body text
               height: 50,
@@ -74,22 +101,26 @@ class AboutUsPage extends StatelessWidget {
                     child: Row(
                       children: [
                         PdfThumnnailButton(
-                          thumbnail: "assets/images/the_front1.png",
+                          thumbnail:
+                              "assets/images/Home/Newsletters/the_front_one.png",
                           pdf:
                               "http://historical.vs-hp.org/external/The%20Front%20Issue%201.pdf",
                         ),
                         PdfThumnnailButton(
-                          thumbnail: "assets/images/the_front2.png",
+                          thumbnail:
+                              "assets/images/Home/Newsletters/the_front_two.png",
                           pdf:
                               "http://historical.vs-hp.org/external/The%20Front%20Issue%202.pdf",
                         ),
                         PdfThumnnailButton(
-                          thumbnail: "assets/images/the_front3.png",
+                          thumbnail:
+                              "assets/images/Home/Newsletters/the_front_three.png",
                           pdf:
                               "http://historical.vs-hp.org/external/The%20Front%20Issue%203.pdf",
                         ),
                         PdfThumnnailButton(
-                          thumbnail: "assets/images/the_front4.png",
+                          thumbnail:
+                              "assets/images/Home/Newsletters/the_front_four.png",
                           pdf:
                               "http://historical.vs-hp.org/external/The%20Front%20Issue%204.pdf",
                         ),
@@ -245,6 +276,31 @@ class CustomContainer extends StatelessWidget {
           ],
         ),
         color: backgroundColor);
+  }
+}
+
+// button with text underneath the icon
+class CustomIconButton extends StatelessWidget {
+  final Icon icon;
+  final Text? label;
+  final void Function()? onTap;
+
+  const CustomIconButton({
+    Key? key,
+    required this.icon,
+    this.label,
+    this.onTap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap != null ? onTap! : () {},
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [icon, label != null ? label! : Container()],
+      ),
+    );
   }
 }
 
