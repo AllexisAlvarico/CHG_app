@@ -283,7 +283,7 @@ class _EventsPageState extends State<EventsPage> {
               onTap: () => _launchURL(_launchGDrive.toString()),
               child: ClipRRect(
                 child: Image.asset(
-                  "assets/images/events/pdfclick.png",
+                  "assets/images/events/EmbeddedImage.png",
                   height: 250.0,
                 ),
               )),
