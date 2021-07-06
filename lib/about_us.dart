@@ -18,8 +18,7 @@ class AboutUsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xFFE1DFDB), // cream color
       appBar: AppBar(
-        title: Text("About Us"),
-        backgroundColor: Color(0xFF303033), // black color
+        title: Text("About Us"),        backgroundColor: Color(0xFF303033), // black color
       ),
       body: SingleChildScrollView(
         child: Column(
