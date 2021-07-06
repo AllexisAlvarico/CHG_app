@@ -1,6 +1,6 @@
-import 'package:chg/utilities/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:chg/globals.dart';
 
 final Uri _launchGDrive = Uri(
     scheme: 'https',
@@ -16,6 +16,10 @@ class _EventsPageState extends State<EventsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: true, // allows use of back button
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context, false)),
         title: Text(
           "Events",
           style: TextStyle(
@@ -24,60 +28,67 @@ class _EventsPageState extends State<EventsPage> {
               fontFamily: "Futura"),
         ),
       ),
-      drawer: SideDrawer(),
       body: ListView(
         children: <Widget>[
           Image(image: AssetImage("assets/images/events/events1.jpg")),
           Container(
-            color: Colors.grey[400],
+            color: Colors.black,
             child: Column(
               children: [
-                Text(
+                createText(
                   "\nCHG Events Calendar",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                  TextStyle(
+                      fontSize: headerTextFontSize,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                  TextAlign.center,
                 ),
-                Text(
+                createText(
                   "Note: All event dates are subject to change pending Covid-19 " +
                       "restrictions as issued by local authorities to the event sites.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                  TextAlign.center,
                 ),
-                Divider(height: 15.0),
+                Divider(height: spaceSize),
                 Container(
                     child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Text(
-                      "TACTICAL EVENTS\n2021\nAugust Storm at Cal City\n June 11 - 13\nSpring Awakening at Hill 559\nNovember",
-                      textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    createText(
+                      "TACTICAL EVENTS\n2021\nAugust Storm,\nCal City,\nJune 11 - 13,\nSpring Awakening,\nHill 559,\nNovember",
+                      TextStyle(
+                        fontSize: regularTextFontSize,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      TextAlign.center,
                     ),
-                    Text(
-                      "PUBLIC EVENTS\n2021\n\nPlanes of Fame\nAirshow in Chino\n 30-31 Oct",
-                      textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    createText(
+                      "PUBLIC EVENTS 2021,\nPlanes of Fame,\nAirshow in Chino,\n30-31 Oct",
+                      TextStyle(
+                        fontSize: regularTextFontSize,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      TextAlign.center,
                     ),
                   ],
                 )),
               ],
             ),
           ),
-          Divider(height: 20.0, thickness: 21.0, color: Colors.grey[400]),
+          Divider(height: spaceSize, thickness: 21.0, color: Colors.black),
           Image(image: AssetImage("assets/images/events/events2.jpg")),
           Divider(
-            height: 10.0,
+            height: spaceSize,
           ),
           createText(
               "Temporary Membership Rule",
-              TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              TextStyle(
+                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 7.5,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -94,10 +105,10 @@ class _EventsPageState extends State<EventsPage> {
                   "\n\nPlease note that if you are not current on your CHG dues," +
                   " you will need to pay either Temporary or Regular Membership" +
                   " dues at the event.",
-              TextStyle(fontSize: 16),
+              TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             color: Colors.transparent,
           ),
           createText(
@@ -106,14 +117,15 @@ class _EventsPageState extends State<EventsPage> {
               TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
               "CHG Photography Policy",
-              TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              TextStyle(
+                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
-          Divider(height: 15.0, thickness: 2),
+          Divider(height: spaceSize, thickness: 2),
           createText(
               "Taking digital photographs and video is reserved for paid " +
                   "CHG Members. The amount and nature should be such that it does" +
@@ -127,18 +139,19 @@ class _EventsPageState extends State<EventsPage> {
                   " member units. Regardless who attends an event they must be in" +
                   " period clothing, with grooming and overall appearance meeting" +
                   " standards of the time period.",
-              TextStyle(fontSize: 16),
+              TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
               "Different Event Types",
-              TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              TextStyle(
+                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -149,18 +162,19 @@ class _EventsPageState extends State<EventsPage> {
                   " descriptions of the different event types with examples of" +
                   " each. See the calendar for notices and links to more" +
                   " information of CHG hosted and participating events.",
-              TextStyle(fontSize: 16),
+              TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
               "Private Tactical Battle",
-              TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              TextStyle(
+                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -198,20 +212,21 @@ class _EventsPageState extends State<EventsPage> {
                   " battles at Living History events such as the Chino Air" +
                   " Show and at Marching Through History.",
               TextStyle(
-                fontSize: 16,
+                fontSize: regularTextFontSize,
               ),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           Text(
             "Living History",
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -237,18 +252,19 @@ class _EventsPageState extends State<EventsPage> {
                   " includes other venues involving the public, such as Air" +
                   " Shows, Gun Shows, Parades. Veteran Events, Memorial" +
                   " Services, etc. ",
-              TextStyle(fontSize: 16),
+              TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
               "Minimum Age\nPolicy for Tactical Events:",
-              TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              TextStyle(
+                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             thickness: 2,
           ),
           createText(
@@ -263,9 +279,9 @@ class _EventsPageState extends State<EventsPage> {
                   " must be present with the minor during the event. " +
                   "In no situation, however, may anyone under the age " +
                   " of 15 be admitted to tactical events.",
-              TextStyle(fontSize: 16),
+              TextStyle(fontSize: regularTextFontSize),
               TextAlign.left),
-          Divider(height: 15.0),
+          Divider(height: spaceSize),
           GestureDetector(
               onTap: () => _launchURL(_launchGDrive.toString()),
               child: ClipRRect(
@@ -275,7 +291,7 @@ class _EventsPageState extends State<EventsPage> {
                 ),
               )),
           Divider(
-            height: 15.0,
+            height: spaceSize,
           ),
         ],
       ), // temp
@@ -285,15 +301,3 @@ class _EventsPageState extends State<EventsPage> {
 
 void _launchURL(_url) async =>
     await canLaunch(_url) ? await launch(_url) : throw 'Could not launch $_url';
-
-createText(String text, TextStyle style, TextAlign position) {
-  return SizedBox(
-      width: double.infinity,
-      child: Container(
-          margin: const EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0),
-          child: Text(
-            text,
-            style: style,
-            textAlign: position,
-          )));
-}

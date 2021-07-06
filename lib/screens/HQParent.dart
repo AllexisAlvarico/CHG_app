@@ -1,7 +1,7 @@
 import 'package:chg/utilities/sideDrawer.dart';
 import 'package:chg/tabs/HeadquartersTab.dart';
-import 'package:chg/tabs/AxisTab.dart';
-import 'package:chg/tabs/AlliesTab.dart';
+import 'package:chg/tabs/AxisPage.dart';
+import 'package:chg/tabs/AlliesPage.dart';
 import 'package:flutter/material.dart';
 
 class TestScreen extends StatefulWidget {
@@ -12,7 +12,7 @@ class TestScreen extends StatefulWidget {
 class _TestScreenState extends State<TestScreen> {
   int _index = 0;
 
-  final List<Widget> _tabs = [HeadquartersTab(), AlliesTab(), AxisTab()];
+  final List<Widget> _tabs = [HeadquartersTab(), AlliesPage(), AxisPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
