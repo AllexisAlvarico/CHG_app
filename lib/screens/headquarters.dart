@@ -1,3 +1,4 @@
+import 'package:chg/utilities/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -20,10 +21,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color(0xffe1dfdb),
-        appBar: AppBar(
-          title: Text("Headquarters"),
-          backgroundColor: Color(0xff303033),
-        ),
+        drawer: SideDrawer(),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

@@ -1,3 +1,4 @@
+import 'package:chg/utilities/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import '../globals.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -47,19 +48,7 @@ class _JoinPageState extends State<JoinPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: true, // allows use of back button
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context, false)),
-        title: createText(
-            "Join",
-            TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Futura"),
-            TextAlign.left),
-      ),
+      drawer: SideDrawer(),
       body: ListView(
         children: [
           Image(image: AssetImage("assets/images/Join/JoinHeader.JPG")),

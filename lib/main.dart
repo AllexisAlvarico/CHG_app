@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:chg/screens/home_screen.dart';
-import 'package:chg/screens/test.dart';
+import 'package:chg/screens/HQParent.dart';
 import 'screens/events.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
@@ -15,11 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          canvasColor: Colors.black,
-          accentColor: Colors.amber,
-          backgroundColor: Color(0xFF303033),
-          brightness: Brightness.dark),
-      initialRoute: 'home',
+        canvasColor: Color(0xE1DFDB),
+        accentColor: Colors.black,
+        backgroundColor: Color(0xFF303033),
+        brightness: Brightness.dark,
+      ),
+      initialRoute: 'Home',
       home: AnimatedSplashScreen(
         splash: Image.asset(
           'assets/images/Home/Logo.png',
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color(0xFFE1DFD8),
       ),
       routes: {
-        'home': (context) => HomePage(),
+        'Home': (context) => HomePage(),
         'Events': (context) => EventsPage(),
         'Headquarters': (context) => TestScreen()
       },

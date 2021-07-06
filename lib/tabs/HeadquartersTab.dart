@@ -24,7 +24,8 @@ class HeadquartersTab extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Color(0xffe1dfdb),
         appBar: AppBar(
-          title: Text("TestPage"),
+          automaticallyImplyLeading: false,
+          title: Text("HQ"),
           backgroundColor: Color(0xFF303033),
           bottom: TabBar(
             tabs: [
@@ -43,7 +44,6 @@ class HeadquartersTab extends StatelessWidget {
             ],
           ),
         ),
-        drawer: SideDrawer(),
         body: TabBarView(
           children: [
             HeadquarterPage(),
