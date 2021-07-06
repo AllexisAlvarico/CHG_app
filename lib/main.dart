@@ -1,11 +1,8 @@
-import 'package:chg/headquarters.dart';
 import 'package:flutter/material.dart';
-import 'join.dart';
 import 'package:chg/screens/home_screen.dart';
 import 'package:chg/screens/test.dart';
 import 'screens/events.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'headquarters.dart';
 
 void main() {
   runApp(MyApp());
