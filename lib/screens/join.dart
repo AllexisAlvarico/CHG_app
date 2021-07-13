@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../globals.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../utilities/device.dart';
 
 final Uri _launchAUnit1 = Uri(scheme: 'https', path: "www.2ndidmanchus.org");
 final Uri _launchAUnit2 =
@@ -53,7 +54,7 @@ class _JoinPageState extends State<JoinPage> {
           Container(
             child: Column(
               children: [
-                const Divider(
+                Divider(
                   height: spaceSize,
                   thickness: 2,
                 ),
@@ -62,7 +63,7 @@ class _JoinPageState extends State<JoinPage> {
                   TextStyle(fontSize: headerTextFontSize),
                   TextAlign.center,
                 ),
-                const Divider(
+                Divider(
                   height: spaceSize,
                   thickness: 2,
                 ),
@@ -366,7 +367,7 @@ class _JoinPageState extends State<JoinPage> {
                     child: ClipRRect(
                       child: Image.asset(
                         "assets/images/Join/Dues.png",
-                        height: 200,
+                        height: Device.safeBlockVertical * 50,
                         alignment: Alignment.topRight,
                       ),
                     )),
