@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:chg/screens/home_screen.dart';
 import 'package:chg/screens/HQParent.dart';
+import 'package:flutter/services.dart';
 import 'screens/events.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'utilities/device.dart';
@@ -14,6 +15,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Device.init();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+    ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
