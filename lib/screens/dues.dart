@@ -55,7 +55,7 @@ class _DuesPageState extends State<DuesPage> {
           ),
           createText(
             "Dues payments will NOT be accepted at events.",
-            TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            TextStyle(fontSize: alertSize, fontWeight: FontWeight.bold),
             TextAlign.center,
           ),
           Divider(
@@ -83,7 +83,7 @@ class _DuesPageState extends State<DuesPage> {
                 createText(
                   "New Members",
                   TextStyle(
-                      fontSize: 26,
+                      fontSize: headerTextFontSize,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                   TextAlign.center,
@@ -93,7 +93,7 @@ class _DuesPageState extends State<DuesPage> {
                       " to complete and turn in a Prospective Member Form to your unit" +
                       " leader at your first event.\n\nPlease note: battle fees are" +
                       " required at every event -- including your first one.",
-                  TextStyle(fontSize: 16, color: Colors.black),
+                  TextStyle(fontSize: regularTextFontSize, color: Colors.black),
                   TextAlign.left,
                 ),
                 Divider(
@@ -115,7 +115,7 @@ class _DuesPageState extends State<DuesPage> {
                 createText(
                   "Prospective Member Form",
                   TextStyle(
-                      fontSize: 16,
+                      fontSize: regularTextFontSize,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
