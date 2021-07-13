@@ -1,7 +1,7 @@
-import 'package:chg/utilities/sideDrawer.dart';
-import 'package:chg/tabs/HeadquartersTab.dart';
-import 'package:chg/tabs/AxisPage.dart';
-import 'package:chg/tabs/AlliesPage.dart';
+import 'package:CHG/utilities/sideDrawer.dart';
+import 'package:CHG/tabs/HeadquartersTab.dart';
+import 'package:CHG/tabs/AxisPage.dart';
+import 'package:CHG/tabs/AlliesPage.dart';
 import 'package:flutter/material.dart';
 
 class TestScreen extends StatefulWidget {

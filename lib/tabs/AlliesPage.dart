@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chg/units_button.dart';
+import 'package:CHG/units_button.dart';
 
 class AlliesPage extends StatelessWidget {
   // american data

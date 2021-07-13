@@ -1,6 +1,6 @@
-import 'package:chg/unit_contact.dart';
+import 'package:CHG/unit_contact.dart';
 import 'package:flutter/material.dart';
-import 'package:chg/url_functions.dart';
+import 'package:CHG/url_functions.dart';
 
 // button with a clickable image representing the corresponding unit.
 // used in the allies and axis pages to provide links to webpages of different
