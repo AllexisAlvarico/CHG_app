@@ -1,3 +1,4 @@
+import 'package:chg/utilities/device.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/screens/home_screen.dart';
 import 'package:chg/screens/HQParent.dart';
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Device.init();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
