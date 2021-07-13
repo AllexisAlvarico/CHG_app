@@ -3,6 +3,7 @@ import 'package:chg/tabs/HeadquartersTab.dart';
 import 'package:chg/tabs/AxisPage.dart';
 import 'package:chg/tabs/AlliesPage.dart';
 import 'package:flutter/material.dart';
+import '../utilities/device.dart';
 
 class TestScreen extends StatefulWidget {
   @override

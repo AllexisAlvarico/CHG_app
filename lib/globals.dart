@@ -1,10 +1,11 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
+import './utilities/device.dart';
 
 createText(String text, TextStyle style, TextAlign position) {
   return SizedBox(
       child: Container(
-          margin: const EdgeInsets.fromLTRB(spaceSize, 0.0, spaceSize, 0),
+          margin: EdgeInsets.fromLTRB(spaceSize, 0.0, spaceSize, 0),
           child: Text(
             text,
             style: style,
@@ -12,8 +13,8 @@ createText(String text, TextStyle style, TextAlign position) {
           )));
 }
 
-const double regularTextFontSize = 16.0;
-const double headerTextFontSize = 26.0;
-const double alertSize = 20.0;
+double regularTextFontSize = Device.safeBlockVertical * 3;
+double headerTextFontSize = Device.safeBlockVertical * 5;
+double alertSize = Device.safeBlockVertical * 4;
 
-const double spaceSize = 20.0;
+double spaceSize = Device.safeBlockVertical * 2;
