@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:chg/screens/home_screen.dart';
-import 'package:chg/screens/HQParent.dart';
+import 'package:CHG/screens/home_screen.dart';
+import 'package:CHG/screens/HQParent.dart';
 import 'screens/events.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
         nextScreen: HomePage(),
         splashTransition: SplashTransition.rotationTransition,
         backgroundColor: Color(0xFFE1DFD8),
+        duration: 20000,
       ),
       routes: {
         'Home': (context) => HomePage(),

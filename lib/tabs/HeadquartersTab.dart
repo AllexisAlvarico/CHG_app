@@ -1,6 +1,6 @@
-import 'package:chg/screens/dues.dart';
-import 'package:chg/screens/headquarters.dart';
-import 'package:chg/screens/join.dart';
+import 'package:CHG/screens/dues.dart';
+import 'package:CHG/screens/headquarters.dart';
+import 'package:CHG/screens/join.dart';
 import 'package:flutter/material.dart';
 
 class HeadquartersTab extends StatelessWidget {

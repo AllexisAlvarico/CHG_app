@@ -1,7 +1,7 @@
-import 'package:chg/utilities/sideDrawer.dart';
+import 'package:CHG/utilities/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:chg/utilities/pdfView.dart';
+import 'package:CHG/utilities/pdfView.dart';
 import '../globals.dart';
 
 class HomePage extends StatelessWidget {
@@ -51,9 +51,6 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const Divider(
-              height: spaceSize,
-            ),
             Image.asset(
                 // logo grabbed from the main website, have to reduce quality
                 // as it introduced lag

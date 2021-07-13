@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chg">
+    package="com.vshp.chg">
     <!-- Add the block below to your manifest file to configure apps with action.VIEW intent filters as visible to your app -->
     <!-- START HERE -->
     <queries>

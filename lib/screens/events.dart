@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:chg/globals.dart';
+import 'package:CHG/globals.dart';
 
 final Uri _launchGDrive = Uri(
     scheme: 'https',
