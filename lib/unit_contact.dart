@@ -1,5 +1,7 @@
 import 'package:chg/custom_icon_button.dart';
+import 'package:chg/globals.dart';
 import 'package:chg/url_functions.dart';
+import 'package:chg/utilities/device.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/units_button.dart';
 
@@ -31,7 +33,7 @@ class UnitContactPage extends StatelessWidget {
               ? Text(
                   data.name!,
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: headerTextFontSize,
                     color: Colors.black,
                   ),
                   textAlign: TextAlign.center,
@@ -43,14 +45,14 @@ class UnitContactPage extends StatelessWidget {
             color: Color(0xFF303033), // black color
           ),
           SizedBox(
-            height: 15,
+            height: Device.safeBlockVertical * 2.5,
           ),
           // unit leader name or empty container if null
           data.leaderName != null
               ? Text(
                   data.leaderName!,
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: regularTextFontSize,
                     color: Colors.black,
                   ),
                   textAlign: TextAlign.center,
@@ -61,7 +63,7 @@ class UnitContactPage extends StatelessWidget {
           data.child != null ? data.child! : Container(),
           SizedBox(
             // end of page or email spacing
-            height: 50,
+            height: Device.safeBlockVertical * 8,
           ),
           // unit email or empty container if null
           data.email != null
