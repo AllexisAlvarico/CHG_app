@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../globals.dart';
+import '../utilities/device.dart';
 
 final Uri _launchDues =
     Uri(scheme: 'https', path: "www.chgww2.net/headquarters/dues");
@@ -50,7 +51,7 @@ class _DuesPageState extends State<DuesPage> {
             TextAlign.left,
           ),
           Divider(
-            height: 15.0,
+            height: spaceSize,
             color: Colors.transparent,
           ),
           createText(
@@ -67,18 +68,18 @@ class _DuesPageState extends State<DuesPage> {
               child: ClipRRect(
                 child: Image.asset(
                   "assets/images/uncledues.jpg",
-                  height: 250.0,
+                  height: Device.safeBlockVertical * 50,
                 ),
               )),
           Divider(
-            height: 10.0,
+            height: spaceSize,
           ),
           Container(
             color: Colors.grey[350],
             child: Column(
               children: [
                 Divider(
-                  height: 10.0,
+                  height: spaceSize,
                 ),
                 createText(
                   "New Members",
@@ -97,7 +98,7 @@ class _DuesPageState extends State<DuesPage> {
                   TextAlign.left,
                 ),
                 Divider(
-                  height: 40.0,
+                  height: spaceSize,
                   color: Colors.transparent,
                 ),
                 GestureDetector(
@@ -105,11 +106,11 @@ class _DuesPageState extends State<DuesPage> {
                     child: ClipRRect(
                       child: Image.asset(
                         "assets/images/events/EmbeddedImage.png",
-                        height: 275.0,
+                        height: Device.safeBlockVertical * 50,
                       ),
                     )),
                 Divider(
-                  height: 10.0,
+                  height: spaceSize,
                   color: Colors.transparent,
                 ),
                 createText(
@@ -122,7 +123,7 @@ class _DuesPageState extends State<DuesPage> {
                   TextAlign.center,
                 ),
                 Divider(
-                  height: 30.0,
+                  height: spaceSize,
                   color: Colors.transparent,
                 ),
               ],

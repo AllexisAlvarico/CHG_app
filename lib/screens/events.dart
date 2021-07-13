@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:chg/globals.dart';
+import '../utilities/device.dart';
 
 final Uri _launchGDrive = Uri(
     scheme: 'https',
@@ -287,7 +288,7 @@ class _EventsPageState extends State<EventsPage> {
               child: ClipRRect(
                 child: Image.asset(
                   "assets/images/events/EmbeddedImage.png",
-                  height: 250.0,
+                  height: Device.safeBlockVertical * 50,
                 ),
               )),
           Divider(

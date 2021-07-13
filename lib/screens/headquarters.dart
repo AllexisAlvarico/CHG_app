@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../globals.dart';
+import '../utilities/device.dart';
 
 final Uri _launchDues = Uri(
     scheme: 'https',
@@ -26,7 +27,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Image.asset("assets/images/hq-picture.png"),
-              const Divider(
+              Divider(
                 height: spaceSize,
                 thickness: 2,
               ),
@@ -37,7 +38,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                       fontSize: headerTextFontSize,
                       color: Colors.black),
                   TextAlign.center),
-              const Divider(
+              Divider(
                 height: spaceSize,
                 thickness: 2,
               ),
@@ -57,7 +58,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                   "• Time: 1000 - 1300",
                   TextStyle(fontSize: regularTextFontSize, color: Colors.black),
                   TextAlign.left),
-              const Divider(
+              Divider(
                 height: spaceSize,
                 thickness: 2,
               ),
@@ -68,7 +69,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                       fontSize: headerTextFontSize,
                       color: Colors.black),
                   TextAlign.center),
-              const Divider(
+              Divider(
                 height: spaceSize,
                 thickness: 2,
               ),
@@ -84,10 +85,10 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                   child: ClipRRect(
                     child: Image.asset(
                       "assets/images/paydues.jpg",
-                      height: 250.0,
+                      height: Device.safeBlockVertical * 50,
                     ),
                   )),
-              const Divider(
+              Divider(
                 height: spaceSize,
                 thickness: 2,
               ),
@@ -98,7 +99,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                       fontSize: headerTextFontSize,
                       color: Colors.black),
                   TextAlign.center),
-              const Divider(
+              Divider(
                 height: spaceSize,
                 thickness: 2,
               ),
@@ -114,10 +115,10 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                   child: ClipRRect(
                     child: Image.asset(
                       "assets/images/Google_Drive_logo.png",
-                      height: 100.0,
+                      height: Device.safeBlockVertical * 30,
                     ),
                   )),
-              const Divider(
+              Divider(
                 height: spaceSize,
               ),
             ],

@@ -3,6 +3,7 @@ import 'package:chg/screens/home_screen.dart';
 import 'package:chg/screens/HQParent.dart';
 import 'screens/events.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'utilities/device.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Device.init();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

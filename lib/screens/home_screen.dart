@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:chg/utilities/pdfView.dart';
 import '../globals.dart';
+import '../utilities/device.dart';
 
 class HomePage extends StatelessWidget {
   final String bodyText =
@@ -37,28 +38,27 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     /* var size = MediaQuery.of(context).size; */
-
-    /* ! var cardTextStyle = TextStyle(
-        fontFamily: "Montserrat Regular", fontSize: 14, color: Colors.black); */
-
     return Scaffold(
       backgroundColor: Color(0xFFE1DFD8),
       appBar: AppBar(
-        title: Text("HomePage"),
+        title: Text(
+          "HomePage",
+        ),
         backgroundColor: Theme.of(context).primaryColor,
+        elevation: Device.safeBlockVertical * 5,
       ),
       drawer: SideDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const Divider(
+            Divider(
               height: spaceSize,
             ),
             Image.asset(
                 // logo grabbed from the main website, have to reduce quality
                 // as it introduced lag
                 "assets/images/Home/Home.png"),
-            const Divider(
+            Divider(
               height: spaceSize,
             ),
             createText(
@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
                         fontSize: regularTextFontSize, color: Colors.black),
                     TextAlign.center,
                   ),
-                  const Divider(
+                  Divider(
                     height: spaceSize,
                   ),
                   createText(
@@ -236,7 +236,7 @@ class PdfThumnnailButton extends StatelessWidget {
         ),
         child: Image.asset(
           thumbnail,
-          height: 300,
+          height: Device.safeBlockVertical * 40,
         ),
       ),
     );
