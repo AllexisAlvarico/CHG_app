@@ -1,6 +1,7 @@
 import 'package:chg/url_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/units_button.dart';
+import 'package:chg/globals.dart';
 
 class AxisPage extends StatelessWidget {
   // german data
@@ -26,7 +27,7 @@ class AxisPage extends StatelessWidget {
           child: Text(
             "Call: Otto Steiner (951) 255-2509",
             style: TextStyle(
-              fontSize: 16,
+              fontSize: regularTextFontSize,
               color: Colors.black,
             ),
             textAlign: TextAlign.center,
@@ -92,7 +93,7 @@ class AxisPage extends StatelessWidget {
                     "German Units",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
                   ),
@@ -136,7 +137,7 @@ class AxisPage extends StatelessWidget {
                     "Japanese Units",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
                   ),

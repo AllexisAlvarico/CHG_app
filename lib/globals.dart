@@ -1,6 +1,11 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
+const double regularTextFontSize = 16.0;
+const double headerTextFontSize = 26.0;
+const double alertSize = 20.0;
+const double spaceSize = 20.0;
+
 createText(String text, TextStyle style, TextAlign position) {
   return SizedBox(
       child: Container(
@@ -11,9 +16,3 @@ createText(String text, TextStyle style, TextAlign position) {
             textAlign: position,
           )));
 }
-
-const double regularTextFontSize = 16.0;
-const double headerTextFontSize = 26.0;
-const double alertSize = 20.0;
-
-const double spaceSize = 20.0;

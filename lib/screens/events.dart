@@ -114,7 +114,8 @@ class _EventsPageState extends State<EventsPage> {
           createText(
               "You MUST be a member in either status to" +
                   " attend one of our events.",
-              TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              TextStyle(
+                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
               TextAlign.center),
           Divider(
             height: spaceSize,
