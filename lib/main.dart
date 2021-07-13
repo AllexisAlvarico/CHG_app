@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color(0xFFE1DFD8),
         brightness: Brightness.dark,
       ),
-      initialRoute: 'Home',
       home: AnimatedSplashScreen(
         splash: Image.asset(
           'assets/images/Home/Logo.png',
@@ -28,6 +27,7 @@ class MyApp extends StatelessWidget {
         nextScreen: HomePage(),
         splashTransition: SplashTransition.rotationTransition,
         backgroundColor: Color(0xFFE1DFD8),
+        splashIconSize: 250,
       ),
       routes: {
         'Home': (context) => HomePage(),
