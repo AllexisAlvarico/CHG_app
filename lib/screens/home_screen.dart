@@ -171,7 +171,7 @@ class CustomContainer extends StatelessWidget {
                 color: backgroundColor.computeLuminance() > 0.5
                     ? Colors.black
                     : Colors.white,
-                fontSize: 18,
+                fontSize: regularTextFontSize,
               ),
             ),
             child != null ? child! : Container()

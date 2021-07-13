@@ -1,3 +1,4 @@
+import 'package:chg/globals.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/units_button.dart';
 
@@ -79,7 +80,7 @@ class AlliesPage extends StatelessWidget {
                     "American Units",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
                   ),
@@ -123,7 +124,7 @@ class AlliesPage extends StatelessWidget {
                     "British & Commonwealth Units",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
                   ),
@@ -167,7 +168,7 @@ class AlliesPage extends StatelessWidget {
                     "Red Army Units",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
                   ),
