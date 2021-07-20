@@ -39,12 +39,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     /* var size = MediaQuery.of(context).size; */
     return Scaffold(
-      backgroundColor: Color(0xFFE1DFD8),
+      backgroundColor: backgroundColor,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: textColor),
         title: Text(
           "HomePage",
+          style: TextStyle(color: textColor),
         ),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: appbarColor,
         elevation: Device.safeBlockVertical * 5,
       ),
       drawer: SideDrawer(),
@@ -63,7 +65,7 @@ class HomePage extends StatelessWidget {
             ),
             createText(
               bodyText,
-              TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+              TextStyle(fontSize: regularTextFontSize, color: textColor),
               TextAlign.left,
             ),
             Container(
@@ -78,8 +80,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   createText(
                     newsletterHeadingText,
-                    TextStyle(
-                        fontSize: regularTextFontSize, color: Colors.black),
+                    TextStyle(fontSize: regularTextFontSize, color: textColor),
                     TextAlign.center,
                   ),
                   Divider(
@@ -87,8 +88,7 @@ class HomePage extends StatelessWidget {
                   ),
                   createText(
                     newsletterText,
-                    TextStyle(
-                        fontSize: regularTextFontSize, color: Colors.black),
+                    TextStyle(fontSize: regularTextFontSize, color: textColor),
                     TextAlign.center,
                   ),
                   SingleChildScrollView(
@@ -127,7 +127,7 @@ class HomePage extends StatelessWidget {
             ),
             createText(
               footerText,
-              TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+              TextStyle(fontSize: regularTextFontSize, color: textColor),
               TextAlign.center,
             ),
           ],
@@ -141,13 +141,11 @@ class HomePage extends StatelessWidget {
 // bits of information throughout the about us page
 class CustomContainer extends StatelessWidget {
   final String text;
-  final Color backgroundColor;
   final Widget? child;
 
   const CustomContainer({
     Key? key,
     required this.text,
-    required this.backgroundColor,
     this.child,
   }) : super(key: key);
 
@@ -168,9 +166,7 @@ class CustomContainer extends StatelessWidget {
               style: TextStyle(
                 // if the background color is on the darker side,
                 // set the text color to white. vice versa for lighter backgrounds
-                color: backgroundColor.computeLuminance() > 0.5
-                    ? Colors.black
-                    : Colors.white,
+                color: textColor,
                 fontSize: regularTextFontSize,
               ),
             ),

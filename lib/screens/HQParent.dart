@@ -1,9 +1,9 @@
+import 'package:chg/globals.dart';
 import 'package:chg/utilities/sideDrawer.dart';
 import 'package:chg/tabs/HeadquartersTab.dart';
 import 'package:chg/tabs/AxisPage.dart';
 import 'package:chg/tabs/AlliesPage.dart';
 import 'package:flutter/material.dart';
-import '../utilities/device.dart';
 
 class TestScreen extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE1DFD8),
+      backgroundColor: backgroundColor,
       drawer: SideDrawer(),
       body: _tabs[_index],
       bottomNavigationBar: BottomNavigationBar(
@@ -25,18 +25,27 @@ class _TestScreenState extends State<TestScreen> {
         onTap: (index) => setState(() {
           _index = index;
         }),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: appbarColor,
         items: [
           new BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
+            icon: Icon(
+              Icons.camera,
+              color: textColor,
+            ),
             label: 'HQ',
           ),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.groups),
+            icon: Icon(
+              Icons.groups,
+              color: textColor,
+            ),
             label: 'Allies',
           ),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.group),
+            icon: Icon(
+              Icons.group,
+              color: textColor,
+            ),
             label: 'Axis',
           ),
         ],
