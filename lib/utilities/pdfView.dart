@@ -1,3 +1,4 @@
+import 'package:chg/globals.dart';
 import 'package:flutter/material.dart';
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 
@@ -23,15 +24,22 @@ class _PDFViewState extends State<PDFView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE1DFDB), // cream color
+      backgroundColor: backgroundColor,
       appBar: AppBar(
+        leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: textColor,
+            ),
+            onPressed: () => Navigator.pop(context, false)),
         title: Text(
           "The Front",
           style: TextStyle(
-            color: Colors.white,
-          ),
+              color: textColor,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Futura"),
         ),
-        backgroundColor: Color(0xFF303033), // black color
+        backgroundColor: appbarColor,
       ),
       body: _layoutDetails(),
     );
@@ -52,44 +60,47 @@ class _PDFViewState extends State<PDFView> {
 
   Widget _porttrait() {
     return Container(
+      color: backgroundColor,
       child: isLoading
           ? Center(
               child: CircularProgressIndicator(
-              backgroundColor: Color(0xFF303033), // black color
+              color: textColor,
+              backgroundColor: textColor,
             ))
           : PDFViewer(
               document: document,
-              pickerButtonColor: Color(0xFF303033), // black color
+              pickerButtonColor: appbarColor,
+              pickerIconColor: textColor,
               navigationBuilder:
                   (context, page, totalPages, jumpToPage, animateToPage) {
                 return Container(
-                  color: Color(0xFF303033), // black color
+                  color: appbarColor,
                   child: ButtonBar(
                     alignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       IconButton(
                         icon: Icon(
                           Icons.first_page,
-                          color: Colors.white,
+                          color: textColor,
                         ),
                         onPressed: () {
                           animateToPage(page: 0);
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.arrow_back, color: Colors.white),
+                        icon: Icon(Icons.arrow_back, color: textColor),
                         onPressed: () {
                           animateToPage(page: page! - 2);
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.arrow_forward, color: Colors.white),
+                        icon: Icon(Icons.arrow_forward, color: textColor),
                         onPressed: () {
                           animateToPage(page: page);
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.last_page, color: Colors.white),
+                        icon: Icon(Icons.last_page, color: textColor),
                         onPressed: () {
                           animateToPage(page: totalPages! - 1);
                         },
@@ -107,41 +118,41 @@ class _PDFViewState extends State<PDFView> {
       child: isLoading
           ? Center(
               child: CircularProgressIndicator(
-              backgroundColor: Color(0xFF303033), // black color
+              backgroundColor: appbarColor,
             ))
           : PDFViewer(
               document: document,
-              pickerButtonColor: Color(0xFF303033), // black color
+              pickerButtonColor: appbarColor,
               navigationBuilder:
                   (context, page, totalPages, jumpToPage, animateToPage) {
                 return Container(
-                  color: Color(0xFF303033), // black color
+                  color: appbarColor,
                   child: ButtonBar(
                     alignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       IconButton(
                         icon: Icon(
                           Icons.first_page,
-                          color: Colors.white,
+                          color: textColor,
                         ),
                         onPressed: () {
                           animateToPage(page: 0);
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.arrow_back, color: Colors.white),
+                        icon: Icon(Icons.arrow_back, color: textColor),
                         onPressed: () {
                           animateToPage(page: page! - 2);
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.arrow_forward, color: Colors.white),
+                        icon: Icon(Icons.arrow_forward, color: textColor),
                         onPressed: () {
                           animateToPage(page: page);
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.last_page, color: Colors.white),
+                        icon: Icon(Icons.last_page, color: textColor),
                         onPressed: () {
                           animateToPage(page: totalPages! - 1);
                         },
