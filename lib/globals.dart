@@ -38,3 +38,11 @@ setAccentColor(Color newColor) {
 setBackgrundColor(Color newColor) {
   backgroundColor = newColor;
 }
+
+setNewFontSize(double fontSize) {
+  newFontSize = fontSize;
+
+  regularTextFontSize = Device.safeBlockVertical * newFontSize;
+  headerTextFontSize = Device.safeBlockVertical * (newFontSize + 2);
+  alertSize = Device.safeBlockVertical * (newFontSize + 1);
+}
