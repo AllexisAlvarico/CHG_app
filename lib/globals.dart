@@ -13,9 +13,13 @@ createText(String text, TextStyle style, TextAlign position) {
           )));
 }
 
-double regularTextFontSize = Device.safeBlockVertical * 3;
-double headerTextFontSize = Device.safeBlockVertical * 5;
-double alertSize = Device.safeBlockVertical * 4;
+double newFontSize = 3;
+double maxFont = 7;
+double minFont = 1;
+
+double regularTextFontSize = Device.safeBlockVertical * newFontSize;
+double headerTextFontSize = Device.safeBlockVertical * (newFontSize + 2);
+double alertSize = Device.safeBlockVertical * (newFontSize + 1);
 
 double spaceSize = Device.safeBlockVertical * 2;
 
