@@ -22,7 +22,7 @@ class SideDrawer extends StatelessWidget {
               ListTile(
                 title: Text('Settings'),
                 leading: Icon(Icons.settings),
-                onTap: () => Navigator.pushReplacementNamed(
+                onTap: () => Navigator.pushNamed(
                   context,
                   'Settings',
                 ),
