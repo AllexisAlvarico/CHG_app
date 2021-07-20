@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'screens/events.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'utilities/device.dart';
+import 'package:chg/globals.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,9 +23,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        canvasColor: Colors.black,
-        accentColor: Color(0xFFE1DFDB),
-        backgroundColor: Color(0xFFE1DFD8),
+        canvasColor: canvasColor,
+        accentColor: accentColor,
+        backgroundColor: backgroundColor,
         brightness: Brightness.dark,
       ),
       home: AnimatedSplashScreen(
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         ),
         nextScreen: HomePage(),
         splashTransition: SplashTransition.rotationTransition,
-        backgroundColor: Color(0xFFE1DFD8),
+        backgroundColor: backgroundColor,
         splashIconSize: 250,
       ),
       routes: {

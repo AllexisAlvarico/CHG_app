@@ -18,3 +18,19 @@ double headerTextFontSize = Device.safeBlockVertical * 5;
 double alertSize = Device.safeBlockVertical * 4;
 
 double spaceSize = Device.safeBlockVertical * 2;
+
+Color canvasColor = Colors.black;
+Color accentColor = Color(0xFFE1DFDB);
+Color backgroundColor = Color(0xFFE1DFDB);
+
+setCanvasColor(Color newColor) {
+  canvasColor = newColor;
+}
+
+setAccentColor(Color newColor) {
+  accentColor = newColor;
+}
+
+setBackgrundColor(Color newColor) {
+  backgroundColor = newColor;
+}
