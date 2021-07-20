@@ -60,16 +60,19 @@ class _EventsPageState extends State<EventsPage> {
                     child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    createText(
-                      "TACTICAL EVENTS\n2021\nAugust Storm,\nCal City,\nJune 11 - 13,\nSpring Awakening,\nHill 559,\nNovember",
-                      TextStyle(
-                        fontSize: regularTextFontSize,
-                        fontWeight: FontWeight.bold,
-                        color: textColor,
+                    Expanded(
+                      child: createText(
+                        "TACTICAL EVENTS\n2021\nAugust Storm,\nCal City,\nJune 11 - 13,\nSpring Awakening,\nHill 559,\nNovember",
+                        TextStyle(
+                          fontSize: regularTextFontSize,
+                          fontWeight: FontWeight.bold,
+                          color: textColor,
+                        ),
+                        TextAlign.center,
                       ),
-                      TextAlign.center,
                     ),
-                    createText(
+                    Expanded(
+                        child: createText(
                       "PUBLIC EVENTS 2021,\nPlanes of Fame,\nAirshow in Chino,\n30-31 Oct",
                       TextStyle(
                         fontSize: regularTextFontSize,
@@ -77,13 +80,13 @@ class _EventsPageState extends State<EventsPage> {
                         color: textColor,
                       ),
                       TextAlign.center,
-                    ),
+                    )),
                   ],
                 )),
+                Divider(height: 10, thickness: 0.0, color: Colors.transparent),
               ],
             ),
           ),
-          Divider(height: spaceSize, thickness: 21.0, color: Colors.black),
           Image(image: AssetImage("assets/images/events/events2.jpg")),
           Divider(
             height: spaceSize,
