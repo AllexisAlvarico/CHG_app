@@ -42,7 +42,7 @@ class _SettingsPageState extends State<SettingsPage> {
             value: newFontSize,
             min: minFont,
             max: maxFont,
-            divisions: 6,
+            divisions: 4,
             label: newFontSize.round().toString(),
             onChanged: (double value) {
               setState(() {
