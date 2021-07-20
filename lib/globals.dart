@@ -25,12 +25,14 @@ double spaceSize = Device.safeBlockVertical * 2;
 
 Color appbarColor = Colors.black;
 Color backgroundColor = Colors.grey[850]!;
+Color secondaryBackgroundColor = Colors.grey[700]!;
 Color textColor = Colors.white;
 
-setNewTheme(Color canvas, Color appbar, Color text) {
+setNewTheme(Color canvas, Color appbar, Color text, Color secondBackground) {
   setAppBarColor(canvas);
   setBackgroundColor(appbar);
   setTextColor(text);
+  setSecondaryBackgroundColor(secondBackground);
 }
 
 setAppBarColor(Color newColor) {
@@ -39,6 +41,10 @@ setAppBarColor(Color newColor) {
 
 setBackgroundColor(Color newColor) {
   backgroundColor = newColor;
+}
+
+setSecondaryBackgroundColor(Color newColor) {
+  secondaryBackgroundColor = newColor;
 }
 
 setTextColor(Color newColor) {
