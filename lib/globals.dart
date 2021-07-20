@@ -23,20 +23,26 @@ double alertSize = Device.safeBlockVertical * (newFontSize + 1);
 
 double spaceSize = Device.safeBlockVertical * 2;
 
-Color canvasColor = Colors.black;
-Color accentColor = Color(0xFFE1DFDB);
-Color backgroundColor = Color(0xFFE1DFDB);
+Color appbarColor = Colors.black;
+Color backgroundColor = Colors.grey[850]!;
+Color textColor = Colors.white;
 
-setCanvasColor(Color newColor) {
-  canvasColor = newColor;
+setNewTheme(Color canvas, Color appbar, Color text) {
+  setAppBarColor(canvas);
+  setBackgroundColor(appbar);
+  setTextColor(text);
 }
 
-setAccentColor(Color newColor) {
-  accentColor = newColor;
+setAppBarColor(Color newColor) {
+  appbarColor = newColor;
 }
 
-setBackgrundColor(Color newColor) {
+setBackgroundColor(Color newColor) {
   backgroundColor = newColor;
+}
+
+setTextColor(Color newColor) {
+  textColor = newColor;
 }
 
 setNewFontSize(double fontSize) {
