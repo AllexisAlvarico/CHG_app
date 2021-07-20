@@ -1,3 +1,4 @@
+import 'package:chg/globals.dart';
 import 'package:chg/screens/dues.dart';
 import 'package:chg/screens/headquarters.dart';
 import 'package:chg/screens/join.dart';
@@ -21,23 +22,56 @@ class HeadquartersTab extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        backgroundColor: Color(0xFFE1DFD8),
+        backgroundColor: backgroundColor,
         appBar: AppBar(
-          title: Text("HQ"),
-          backgroundColor: Theme.of(context).primaryColor,
+          title: Text(
+            "HQ",
+            style: TextStyle(
+              color: textColor,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Futura",
+            ),
+          ),
+          backgroundColor: appbarColor,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: textColor,
+            ),
+            onPressed: () => Navigator.pop(context),
+          ),
           bottom: TabBar(
+            indicatorColor: textColor,
             tabs: [
               Tab(
-                text: 'Home Base',
-                icon: Icon(Icons.home),
+                child: Text(
+                  'Home Base',
+                  style: TextStyle(
+                    color: textColor,
+                  ),
+                ),
+                icon: Icon(
+                  Icons.home,
+                  color: textColor,
+                ),
               ),
               Tab(
-                text: 'Join',
-                icon: Icon(Icons.group),
+                child: Text(
+                  'Join',
+                  style: TextStyle(
+                    color: textColor,
+                  ),
+                ),
+                icon: Icon(Icons.group, color: textColor),
               ),
               Tab(
-                text: 'Pay dues',
-                icon: Icon(Icons.settings),
+                child: Text(
+                  'Pay dues',
+                  style: TextStyle(
+                    color: textColor,
+                  ),
+                ),
+                icon: Icon(Icons.settings, color: textColor),
               ),
             ],
           ),

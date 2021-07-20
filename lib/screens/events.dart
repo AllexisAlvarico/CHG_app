@@ -21,7 +21,10 @@ class _EventsPageState extends State<EventsPage> {
         backgroundColor: appbarColor,
         automaticallyImplyLeading: true, // allows use of back button
         leading: IconButton(
-            icon: Icon(Icons.arrow_back),
+            icon: Icon(
+              Icons.arrow_back,
+              color: textColor,
+            ),
             onPressed: () => Navigator.pop(context, false)),
         title: Text(
           "Events",
