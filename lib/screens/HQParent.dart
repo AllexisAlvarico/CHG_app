@@ -28,26 +28,26 @@ class _TestScreenState extends State<TestScreen> {
         backgroundColor: appbarColor,
         items: [
           new BottomNavigationBarItem(
-            icon: Icon(
-              Icons.camera,
-              color: textColor,
-            ),
-            label: 'HQ',
-          ),
+              icon: Icon(
+                Icons.camera,
+                color: textColor,
+              ),
+              // ignore: deprecated_member_use
+              title: Text("HQ", style: TextStyle(color: textColor))),
           new BottomNavigationBarItem(
-            icon: Icon(
-              Icons.groups,
-              color: textColor,
-            ),
-            label: 'Allies',
-          ),
+              icon: Icon(
+                Icons.groups,
+                color: textColor,
+              ),
+              // ignore: deprecated_member_use
+              title: Text("Allies", style: TextStyle(color: textColor))),
           new BottomNavigationBarItem(
-            icon: Icon(
-              Icons.group,
-              color: textColor,
-            ),
-            label: 'Axis',
-          ),
+              icon: Icon(
+                Icons.group,
+                color: textColor,
+              ),
+              // ignore: deprecated_member_use
+              title: Text("Axis", style: TextStyle(color: textColor))),
         ],
       ),
     );
