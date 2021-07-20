@@ -12,7 +12,17 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Settings"),
+        automaticallyImplyLeading: true, // allows use of back button
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context, false)),
+        title: Text(
+          "Settings",
+          style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Futura"),
+        ),
       ),
       body: Column(
         children: [
