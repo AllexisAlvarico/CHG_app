@@ -1,5 +1,6 @@
 import 'package:chg/globals.dart';
 import 'package:chg/url_functions.dart';
+import 'package:chg/utilities/device.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/units_button.dart';
 
@@ -88,20 +89,20 @@ class AxisPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  createText(
                     // section heading
                     "German Units",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+                    TextStyle(
                       fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
+                    TextAlign.center,
                   ),
                 ],
               ),
               SizedBox(
                 // spacing between unit heading and unit information
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
               ListView.separated(
                 // list that holds data from a given data
@@ -116,7 +117,7 @@ class AxisPage extends StatelessWidget {
               ),
               SizedBox(
                 // spacing between unit heading and unit information
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
               // japanese section
               Stack(
@@ -132,20 +133,20 @@ class AxisPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  createText(
                     // section heading
                     "Japanese Units",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+                    TextStyle(
                       fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
+                    TextAlign.center,
                   ),
                 ],
               ),
               SizedBox(
                 // spacing between unit heading and unit information
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
               ListView.separated(
                 // list that holds data from a given data
@@ -160,7 +161,7 @@ class AxisPage extends StatelessWidget {
               ),
               SizedBox(
                 // spacing to leave a space at the end of the page
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
             ],
           ),

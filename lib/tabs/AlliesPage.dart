@@ -1,4 +1,5 @@
 import 'package:chg/globals.dart';
+import 'package:chg/utilities/device.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/units_button.dart';
 
@@ -75,20 +76,20 @@ class AlliesPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  createText(
                     // section heading
                     "American Units",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+                    TextStyle(
                       fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
+                    TextAlign.center,
                   ),
                 ],
               ),
               SizedBox(
                 // spacing between unit heading and unit information
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
               ListView.separated(
                 // list that holds data from a given data
@@ -103,7 +104,7 @@ class AlliesPage extends StatelessWidget {
               ),
               SizedBox(
                 // spacing between new unit heading and previous unit information
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
               // british section
               Stack(
@@ -119,20 +120,20 @@ class AlliesPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  createText(
                     // section heading
                     "British & Commonwealth Units",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+                    TextStyle(
                       fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
+                    TextAlign.center,
                   ),
                 ],
               ),
               SizedBox(
                 // spacing between unit heading and unit information
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
               ListView.separated(
                 // list that holds data from a given data
@@ -147,7 +148,7 @@ class AlliesPage extends StatelessWidget {
               ),
               SizedBox(
                 // spacing between new unit heading and previous unit information
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
               // red army section
               Stack(
@@ -163,20 +164,20 @@ class AlliesPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text(
+                  createText(
                     // section heading
                     "Red Army Units",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+                    TextStyle(
                       fontSize: headerTextFontSize,
                       color: Colors.black,
                     ),
+                    TextAlign.center,
                   ),
                 ],
               ),
               SizedBox(
                 // spacing between unit heading and unit information
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
               ListView.separated(
                 // list that holds data from a given data
@@ -191,7 +192,7 @@ class AlliesPage extends StatelessWidget {
               ),
               SizedBox(
                 // spacing to leave a space at the end of the page
-                height: 25,
+                height: Device.safeBlockVertical * 5,
               ),
             ],
           ),
