@@ -13,10 +13,24 @@ class UnitContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE1DFDB), // cream color
+      backgroundColor: backgroundColor,
       appBar: AppBar(
-        title: Text("Unit Contact"),
-        backgroundColor: Color(0xFF303033), // black color
+        title: Text(
+          "Unit Contact",
+          style: TextStyle(
+            color: textColor,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Futura",
+          ),
+        ),
+        backgroundColor: appbarColor,
+        automaticallyImplyLeading: true, // allows use of back button
+        leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: textColor,
+            ),
+            onPressed: () => Navigator.pop(context, false)),
       ),
       body: Column(
         children: [
@@ -34,7 +48,7 @@ class UnitContactPage extends StatelessWidget {
                   data.name!,
                   style: TextStyle(
                     fontSize: headerTextFontSize,
-                    color: Colors.black,
+                    color: textColor,
                   ),
                   textAlign: TextAlign.center,
                 )
@@ -42,7 +56,7 @@ class UnitContactPage extends StatelessWidget {
           Divider(
             // divider between the unit name and leader name
             thickness: 5,
-            color: Color(0xFF303033), // black color
+            color: secondaryBackgroundColor,
           ),
           SizedBox(
             height: Device.safeBlockVertical * 2.5,
@@ -53,7 +67,7 @@ class UnitContactPage extends StatelessWidget {
                   data.leaderName!,
                   style: TextStyle(
                     fontSize: regularTextFontSize,
-                    color: Colors.black,
+                    color: textColor,
                   ),
                   textAlign: TextAlign.center,
                 )
@@ -73,12 +87,12 @@ class UnitContactPage extends StatelessWidget {
                   },
                   icon: Icon(
                     Icons.email_outlined,
-                    color: Colors.black,
+                    color: textColor,
                   ),
                   label: Text(
                     "Email",
                     style: TextStyle(
-                      color: Colors.black,
+                      color: textColor,
                     ),
                   ),
                 )

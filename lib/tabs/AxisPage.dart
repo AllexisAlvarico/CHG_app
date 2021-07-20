@@ -29,7 +29,7 @@ class AxisPage extends StatelessWidget {
             "Call: Otto Steiner (951) 255-2509",
             style: TextStyle(
               fontSize: regularTextFontSize,
-              color: Colors.black,
+              color: textColor,
             ),
             textAlign: TextAlign.center,
           ),
@@ -68,7 +68,7 @@ class AxisPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE1DFDB), // cream color
+      backgroundColor: backgroundColor,
       body: SingleChildScrollView(
         // main scroller to scroll through all lists
         child: Center(
@@ -94,7 +94,7 @@ class AxisPage extends StatelessWidget {
                     "German Units",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -138,7 +138,7 @@ class AxisPage extends StatelessWidget {
                     "Japanese Units",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
