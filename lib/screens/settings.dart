@@ -77,7 +77,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ElevatedButton(
               onPressed: () {
                 setState(() {
-                  setNewTheme(Colors.black, Colors.grey[850]!, Colors.white);
+                  setNewTheme(Colors.black, Colors.grey[850]!, Colors.white,
+                      Colors.grey[700]!);
                 });
               },
               child: Text("Dark Mode")),
@@ -88,7 +89,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ElevatedButton(
               onPressed: () {
                 setState(() {
-                  setNewTheme(Colors.grey[200]!, Colors.white, Colors.black);
+                  setNewTheme(Colors.grey[200]!, Colors.white, Colors.black,
+                      Colors.grey[200]!);
                 });
               },
               child: Text("Light Mode")),
@@ -100,7 +102,7 @@ class _SettingsPageState extends State<SettingsPage> {
               onPressed: () {
                 setState(() {
                   setNewTheme(Colors.yellowAccent, Colors.yellow[400]!,
-                      Colors.yellow[900]!);
+                      Colors.yellow[900]!, Colors.yellow[700]!);
                 });
               },
               child: Text("Monke Mode")),

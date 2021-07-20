@@ -20,13 +20,16 @@ class _DuesPageState extends State<DuesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       body: ListView(
         children: <Widget>[
           Divider(height: spaceSize),
           createText(
             "Dues",
             TextStyle(
-                fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
+                fontSize: headerTextFontSize,
+                fontWeight: FontWeight.bold,
+                color: textColor),
             TextAlign.center,
           ),
           Divider(height: spaceSize),
@@ -47,7 +50,7 @@ class _DuesPageState extends State<DuesPage> {
                 " provided on the form. For those members who are eligible" +
                 " for the Active Duty Military dues waiver, please contact" +
                 " the Treasurer at chgtreasurer@gmail.com",
-            TextStyle(fontSize: regularTextFontSize),
+            TextStyle(fontSize: regularTextFontSize, color: textColor),
             TextAlign.left,
           ),
           Divider(
@@ -56,7 +59,10 @@ class _DuesPageState extends State<DuesPage> {
           ),
           createText(
             "Dues payments will NOT be accepted at events.",
-            TextStyle(fontSize: alertSize, fontWeight: FontWeight.bold),
+            TextStyle(
+                fontSize: alertSize,
+                fontWeight: FontWeight.bold,
+                color: textColor),
             TextAlign.center,
           ),
           Divider(
@@ -75,7 +81,7 @@ class _DuesPageState extends State<DuesPage> {
             height: spaceSize,
           ),
           Container(
-            color: Colors.grey[350],
+            color: secondaryBackgroundColor,
             child: Column(
               children: [
                 Divider(
@@ -86,7 +92,7 @@ class _DuesPageState extends State<DuesPage> {
                   TextStyle(
                       fontSize: headerTextFontSize,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                      color: textColor),
                   TextAlign.center,
                 ),
                 createText(
@@ -94,7 +100,7 @@ class _DuesPageState extends State<DuesPage> {
                       " to complete and turn in a Prospective Member Form to your unit" +
                       " leader at your first event.\n\nPlease note: battle fees are" +
                       " required at every event -- including your first one.",
-                  TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+                  TextStyle(fontSize: regularTextFontSize, color: textColor),
                   TextAlign.left,
                 ),
                 Divider(
@@ -119,7 +125,7 @@ class _DuesPageState extends State<DuesPage> {
                       fontSize: regularTextFontSize,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                      color: textColor),
                   TextAlign.center,
                 ),
                 Divider(
