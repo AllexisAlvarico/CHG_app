@@ -15,8 +15,12 @@ class _SettingsPageState extends State<SettingsPage> {
       appBar: AppBar(
         automaticallyImplyLeading: true, // allows use of back button
         leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context, false)),
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pushReplacementNamed(
+            context,
+            'Home',
+          ),
+        ),
         title: Text(
           "Settings",
           style: TextStyle(

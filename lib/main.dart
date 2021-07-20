@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         'Settings': (context) => SettingsPage(),
+        'Home': (context) => HomePage(),
         'Events': (context) => EventsPage(),
         'Headquarters': (context) => TestScreen()
       },
