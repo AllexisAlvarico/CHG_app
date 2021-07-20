@@ -21,7 +21,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFE1DFD8),
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -36,7 +36,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                   TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: headerTextFontSize,
-                      color: Colors.black),
+                      color: textColor),
                   TextAlign.center),
               Divider(
                 height: spaceSize,
@@ -44,19 +44,19 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
               ),
               createText(
                   "Board Meeting: Sunday, 26 July 2021",
-                  TextStyle(fontSize: alertSize, color: Colors.black),
+                  TextStyle(fontSize: alertSize, color: textColor),
                   TextAlign.center),
               createText(
                   "• Next Meeting: Open to CHG members and guests",
-                  TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+                  TextStyle(fontSize: regularTextFontSize, color: textColor),
                   TextAlign.left),
               createText(
                   "• Location: This meeting will be held online via Discord. Contact your Unit Leader for information.",
-                  TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+                  TextStyle(fontSize: regularTextFontSize, color: textColor),
                   TextAlign.left),
               createText(
                   "• Time: 1000 - 1300",
-                  TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+                  TextStyle(fontSize: regularTextFontSize, color: textColor),
                   TextAlign.left),
               Divider(
                 height: spaceSize,
@@ -67,7 +67,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                   TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: headerTextFontSize,
-                      color: Colors.black),
+                      color: textColor),
                   TextAlign.center),
               Divider(
                 height: spaceSize,
@@ -78,7 +78,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                       "Only CHG members are allowed to attend events; but for new members we make accommodations by not collecting your 25 dollars fee until your second event. You will still need to pay that event's battle fee, which run between 25 dollars and 40 dollars.\n\n" +
                       "Returning members must be paid up on or before the first battle of each year. If not, CHG dues (or temporary dues) must be paid before they are able to participate in an event. Those members not paid current by the first battle will have their names listed as delinquent until which time they are paid. There is no prorating of existing or returning CHG membership dues.\n\n" +
                       "To pay your dues Online click the 'pay dues' icon below:",
-                  TextStyle(fontSize: regularTextFontSize, color: Colors.black),
+                  TextStyle(fontSize: regularTextFontSize, color: textColor),
                   TextAlign.left),
               GestureDetector(
                   onTap: () => _launchURL(_launchDues.toString()),
@@ -97,7 +97,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                   TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: headerTextFontSize,
-                      color: Colors.black),
+                      color: textColor),
                   TextAlign.center),
               Divider(
                 height: spaceSize,
@@ -108,7 +108,7 @@ class _HeadquarterPageState extends State<HeadquarterPage> {
                   TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: regularTextFontSize,
-                      color: Colors.black),
+                      color: textColor),
                   TextAlign.center),
               GestureDetector(
                   onTap: () => _launchURL(_launchGDrive.toString()),

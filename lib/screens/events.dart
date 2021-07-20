@@ -16,7 +16,9 @@ class _EventsPageState extends State<EventsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       appBar: AppBar(
+        backgroundColor: appbarColor,
         automaticallyImplyLeading: true, // allows use of back button
         leading: IconButton(
             icon: Icon(Icons.arrow_back),
@@ -24,7 +26,7 @@ class _EventsPageState extends State<EventsPage> {
         title: Text(
           "Events",
           style: TextStyle(
-              color: Colors.white,
+              color: textColor,
               fontWeight: FontWeight.bold,
               fontFamily: "Futura"),
         ),
@@ -33,7 +35,7 @@ class _EventsPageState extends State<EventsPage> {
         children: <Widget>[
           Image(image: AssetImage("assets/images/events/events1.jpg")),
           Container(
-            color: Colors.black,
+            color: secondaryBackgroundColor,
             child: Column(
               children: [
                 createText(
@@ -41,13 +43,13 @@ class _EventsPageState extends State<EventsPage> {
                   TextStyle(
                       fontSize: headerTextFontSize,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                      color: textColor),
                   TextAlign.center,
                 ),
                 createText(
                   "Note: All event dates are subject to change pending Covid-19 " +
                       "restrictions as issued by local authorities to the event sites.",
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                  TextStyle(fontWeight: FontWeight.bold, color: textColor),
                   TextAlign.center,
                 ),
                 Divider(height: spaceSize),
@@ -60,7 +62,7 @@ class _EventsPageState extends State<EventsPage> {
                       TextStyle(
                         fontSize: regularTextFontSize,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -69,7 +71,7 @@ class _EventsPageState extends State<EventsPage> {
                       TextStyle(
                         fontSize: regularTextFontSize,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -86,7 +88,9 @@ class _EventsPageState extends State<EventsPage> {
           createText(
               "Temporary Membership Rule",
               TextStyle(
-                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
+                  fontSize: headerTextFontSize,
+                  fontWeight: FontWeight.bold,
+                  color: textColor),
               TextAlign.center),
           Divider(
             height: spaceSize,
@@ -106,7 +110,7 @@ class _EventsPageState extends State<EventsPage> {
                   "\n\nPlease note that if you are not current on your CHG dues," +
                   " you will need to pay either Temporary or Regular Membership" +
                   " dues at the event.",
-              TextStyle(fontSize: regularTextFontSize),
+              TextStyle(fontSize: regularTextFontSize, color: textColor),
               TextAlign.left),
           Divider(
             height: spaceSize,
@@ -115,7 +119,8 @@ class _EventsPageState extends State<EventsPage> {
           createText(
               "You MUST be a member in either status to" +
                   " attend one of our events.",
-              TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              TextStyle(
+                  fontSize: 24, fontWeight: FontWeight.bold, color: textColor),
               TextAlign.center),
           Divider(
             height: spaceSize,
@@ -124,7 +129,9 @@ class _EventsPageState extends State<EventsPage> {
           createText(
               "CHG Photography Policy",
               TextStyle(
-                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
+                  fontSize: headerTextFontSize,
+                  fontWeight: FontWeight.bold,
+                  color: textColor),
               TextAlign.center),
           Divider(height: spaceSize, thickness: 2),
           createText(
@@ -140,7 +147,7 @@ class _EventsPageState extends State<EventsPage> {
                   " member units. Regardless who attends an event they must be in" +
                   " period clothing, with grooming and overall appearance meeting" +
                   " standards of the time period.",
-              TextStyle(fontSize: regularTextFontSize),
+              TextStyle(fontSize: regularTextFontSize, color: textColor),
               TextAlign.left),
           Divider(
             height: spaceSize,
@@ -149,7 +156,9 @@ class _EventsPageState extends State<EventsPage> {
           createText(
               "Different Event Types",
               TextStyle(
-                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
+                  fontSize: headerTextFontSize,
+                  fontWeight: FontWeight.bold,
+                  color: textColor),
               TextAlign.center),
           Divider(
             height: spaceSize,
@@ -163,7 +172,7 @@ class _EventsPageState extends State<EventsPage> {
                   " descriptions of the different event types with examples of" +
                   " each. See the calendar for notices and links to more" +
                   " information of CHG hosted and participating events.",
-              TextStyle(fontSize: regularTextFontSize),
+              TextStyle(fontSize: regularTextFontSize, color: textColor),
               TextAlign.left),
           Divider(
             height: spaceSize,
@@ -172,7 +181,9 @@ class _EventsPageState extends State<EventsPage> {
           createText(
               "Private Tactical Battle",
               TextStyle(
-                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
+                  fontSize: headerTextFontSize,
+                  fontWeight: FontWeight.bold,
+                  color: textColor),
               TextAlign.center),
           Divider(
             height: spaceSize,
@@ -212,9 +223,7 @@ class _EventsPageState extends State<EventsPage> {
                   " recreate. The public can however see scaled-down public" +
                   " battles at Living History events such as the Chino Air" +
                   " Show and at Marching Through History.",
-              TextStyle(
-                fontSize: regularTextFontSize,
-              ),
+              TextStyle(fontSize: regularTextFontSize, color: textColor),
               TextAlign.left),
           Divider(
             height: spaceSize,
@@ -223,7 +232,9 @@ class _EventsPageState extends State<EventsPage> {
           Text(
             "Living History",
             style: TextStyle(
-                fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
+                fontSize: headerTextFontSize,
+                fontWeight: FontWeight.bold,
+                color: textColor),
             textAlign: TextAlign.center,
           ),
           Divider(
@@ -253,7 +264,7 @@ class _EventsPageState extends State<EventsPage> {
                   " includes other venues involving the public, such as Air" +
                   " Shows, Gun Shows, Parades. Veteran Events, Memorial" +
                   " Services, etc. ",
-              TextStyle(fontSize: regularTextFontSize),
+              TextStyle(fontSize: regularTextFontSize, color: textColor),
               TextAlign.left),
           Divider(
             height: spaceSize,
@@ -262,7 +273,9 @@ class _EventsPageState extends State<EventsPage> {
           createText(
               "Minimum Age\nPolicy for Tactical Events:",
               TextStyle(
-                  fontSize: headerTextFontSize, fontWeight: FontWeight.bold),
+                  fontSize: headerTextFontSize,
+                  fontWeight: FontWeight.bold,
+                  color: textColor),
               TextAlign.center),
           Divider(
             height: spaceSize,
@@ -280,7 +293,7 @@ class _EventsPageState extends State<EventsPage> {
                   " must be present with the minor during the event. " +
                   "In no situation, however, may anyone under the age " +
                   " of 15 be admitted to tactical events.",
-              TextStyle(fontSize: regularTextFontSize),
+              TextStyle(fontSize: regularTextFontSize, color: textColor),
               TextAlign.left),
           Divider(height: spaceSize),
           GestureDetector(
