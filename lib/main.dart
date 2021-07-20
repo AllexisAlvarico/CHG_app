@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        canvasColor: canvasColor,
-        accentColor: accentColor,
-        backgroundColor: backgroundColor,
+        canvasColor: Colors.amber,
+        accentColor: Colors.amber,
+        backgroundColor: Colors.amber,
         brightness: Brightness.dark,
       ),
       home: AnimatedSplashScreen(
