@@ -52,6 +52,8 @@ class _SettingsPageState extends State<SettingsPage> {
             min: minFont,
             max: maxFont,
             divisions: 4,
+            activeColor: textColor,
+            inactiveColor: appbarColor,
             label: newFontSize.round().toString(),
             onChanged: (double value) {
               setState(() {
