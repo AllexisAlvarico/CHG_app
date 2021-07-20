@@ -20,11 +20,11 @@ class SideDrawer extends StatelessWidget {
                 ),
               ),
               ListTile(
-                title: Text('Home'),
-                leading: Icon(Icons.home),
+                title: Text('Settings'),
+                leading: Icon(Icons.settings),
                 onTap: () => Navigator.pushReplacementNamed(
                   context,
-                  'home',
+                  'Settings',
                 ),
               ),
               ListTile(

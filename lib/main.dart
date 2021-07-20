@@ -1,3 +1,4 @@
+import 'package:chg/screens/settings.dart';
 import 'package:chg/utilities/device.dart';
 import 'package:flutter/material.dart';
 import 'package:chg/screens/home_screen.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         splashIconSize: 250,
       ),
       routes: {
-        'Home': (context) => HomePage(),
+        'Settings': (context) => SettingsPage(),
         'Events': (context) => EventsPage(),
         'Headquarters': (context) => TestScreen()
       },
