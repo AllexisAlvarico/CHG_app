@@ -78,10 +78,11 @@ class _SettingsPageState extends State<SettingsPage> {
               onPressed: () {
                 setState(() {
                   setNewTheme(Colors.black, Colors.grey[850]!, Colors.white,
-                      Colors.grey[700]!);
+                      Colors.grey[700]!, Colors.black);
                 });
               },
-              child: Text("Dark Mode")),
+              child: Text("Dark Mode", style: TextStyle(color: textColor)),
+              style: ElevatedButton.styleFrom(primary: buttonColor)),
           Divider(
             height: 20.0,
             color: Colors.transparent,
@@ -90,10 +91,11 @@ class _SettingsPageState extends State<SettingsPage> {
               onPressed: () {
                 setState(() {
                   setNewTheme(Colors.grey[200]!, Colors.white, Colors.black,
-                      Colors.grey[200]!);
+                      Colors.grey[200]!, Colors.grey[300]!);
                 });
               },
-              child: Text("Light Mode")),
+              child: Text("Light Mode", style: TextStyle(color: textColor)),
+              style: ElevatedButton.styleFrom(primary: buttonColor)),
           Divider(
             height: 20.0,
             color: Colors.transparent,
@@ -101,11 +103,16 @@ class _SettingsPageState extends State<SettingsPage> {
           ElevatedButton(
               onPressed: () {
                 setState(() {
-                  setNewTheme(Colors.yellowAccent, Colors.yellow[400]!,
-                      Colors.yellow[900]!, Colors.yellow[700]!);
+                  setNewTheme(
+                      Colors.yellowAccent,
+                      Colors.yellow[400]!,
+                      Colors.yellow[900]!,
+                      Colors.yellow[700]!,
+                      Colors.yellow[100]!);
                 });
               },
-              child: Text("Monke Mode")),
+              child: Text("Monke Mode", style: TextStyle(color: textColor)),
+              style: ElevatedButton.styleFrom(primary: buttonColor)),
         ],
       ),
     );
