@@ -1,4 +1,4 @@
-import 'package:chg/globals.dart';
+import 'package:CHG/globals.dart';
 import 'package:flutter/material.dart';
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 

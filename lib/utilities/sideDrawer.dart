@@ -1,4 +1,4 @@
-import 'package:chg/globals.dart';
+import 'package:CHG/globals.dart';
 import 'package:flutter/material.dart';
 
 class SideDrawer extends StatelessWidget {

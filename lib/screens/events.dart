@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:chg/globals.dart';
+import 'package:CHG/globals.dart';
 import '../utilities/device.dart';
 
 final Uri _launchGDrive = Uri(

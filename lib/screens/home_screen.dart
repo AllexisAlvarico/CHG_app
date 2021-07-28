@@ -1,7 +1,7 @@
-import 'package:chg/utilities/sideDrawer.dart';
+import 'package:CHG/utilities/sideDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:chg/utilities/pdfView.dart';
+import 'package:CHG/utilities/pdfView.dart';
 import '../globals.dart';
 import '../utilities/device.dart';
 

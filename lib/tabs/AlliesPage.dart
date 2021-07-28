@@ -1,7 +1,7 @@
-import 'package:chg/globals.dart';
-import 'package:chg/utilities/device.dart';
+import 'package:CHG/globals.dart';
+import 'package:CHG/utilities/device.dart';
 import 'package:flutter/material.dart';
-import 'package:chg/units_button.dart';
+import 'package:CHG/units_button.dart';
 
 class AlliesPage extends StatelessWidget {
   // american data

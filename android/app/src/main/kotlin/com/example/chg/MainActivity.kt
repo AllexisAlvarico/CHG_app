@@ -1,4 +1,4 @@
-package com.example.chg
+package com.vshp.chg
 
 import io.flutter.embedding.android.FlutterActivity
 

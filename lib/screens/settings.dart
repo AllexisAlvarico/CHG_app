@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chg/globals.dart';
+import 'package:CHG/globals.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
