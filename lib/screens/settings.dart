@@ -102,8 +102,8 @@ class _SettingsPageState extends State<SettingsPage> {
               Divider(
                 height: 20.0,
                 color: Colors.transparent,
-              ),
-              ElevatedButton(
+              )
+              /*ElevatedButton(
                   onPressed: () {
                     setState(() {
                       setNewTheme(
@@ -153,7 +153,7 @@ class _SettingsPageState extends State<SettingsPage> {
               Divider(
                 height: 20.0,
                 color: Colors.transparent,
-              ),
+              ),*/
             ],
           ),
         ));
