@@ -1,9 +1,9 @@
+import 'package:chg/globals.dart';
 import 'package:chg/utilities/sideDrawer.dart';
 import 'package:chg/tabs/HeadquartersTab.dart';
 import 'package:chg/tabs/AxisPage.dart';
 import 'package:chg/tabs/AlliesPage.dart';
 import 'package:flutter/material.dart';
-import '../utilities/device.dart';
 
 class TestScreen extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE1DFD8),
+      backgroundColor: backgroundColor,
       drawer: SideDrawer(),
       body: _tabs[_index],
       bottomNavigationBar: BottomNavigationBar(
@@ -25,20 +25,29 @@ class _TestScreenState extends State<TestScreen> {
         onTap: (index) => setState(() {
           _index = index;
         }),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: appbarColor,
         items: [
           new BottomNavigationBarItem(
-            icon: Icon(Icons.camera),
-            label: 'HQ',
-          ),
+              icon: Icon(
+                Icons.camera,
+                color: textColor,
+              ),
+              // ignore: deprecated_member_use
+              title: Text("HQ", style: TextStyle(color: textColor))),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.groups),
-            label: 'Allies',
-          ),
+              icon: Icon(
+                Icons.groups,
+                color: textColor,
+              ),
+              // ignore: deprecated_member_use
+              title: Text("Allies", style: TextStyle(color: textColor))),
           new BottomNavigationBarItem(
-            icon: Icon(Icons.group),
-            label: 'Axis',
-          ),
+              icon: Icon(
+                Icons.group,
+                color: textColor,
+              ),
+              // ignore: deprecated_member_use
+              title: Text("Axis", style: TextStyle(color: textColor))),
         ],
       ),
     );

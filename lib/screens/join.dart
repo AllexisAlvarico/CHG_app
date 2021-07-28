@@ -48,6 +48,7 @@ class _JoinPageState extends State<JoinPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       body: ListView(
         children: [
           Image(image: AssetImage("assets/images/Join/JoinHeader.JPG")),
@@ -60,7 +61,7 @@ class _JoinPageState extends State<JoinPage> {
                 ),
                 createText(
                   "BECOMING A WWII REENACTOR",
-                  TextStyle(fontSize: headerTextFontSize),
+                  TextStyle(fontSize: headerTextFontSize, color: textColor),
                   TextAlign.center,
                 ),
                 Divider(
@@ -87,26 +88,23 @@ class _JoinPageState extends State<JoinPage> {
                           "Carefully examine each unit through their websites, phone numbers, and e-mails." +
                       " If you find a unit which holds interest to you, feel free to contact the recruiting officer for that unit and inquire" +
                       " about things such as unit authenticity standards, accepted vendors, and requirement for membership within that unit.\n\n",
-                  TextStyle(
-                    fontSize: regularTextFontSize,
-                  ),
+                  TextStyle(fontSize: regularTextFontSize, color: textColor),
                   TextAlign.left,
                 ),
               ],
             ),
           ),
           Container(
-              color: Colors.grey[400],
+              color: backgroundColor,
               child: Column(
                 children: [
                   createText(
                       "\n*These units are second impression units.",
-                      TextStyle(fontSize: alertSize, color: Colors.black),
+                      TextStyle(fontSize: alertSize, color: textColor),
                       TextAlign.center),
                   createText(
                     "\nAmerican Units",
-                    TextStyle(
-                        fontSize: headerTextFontSize, color: Colors.black),
+                    TextStyle(fontSize: headerTextFontSize, color: textColor),
                     TextAlign.center,
                   ),
                   GestureDetector(
@@ -116,7 +114,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -128,7 +126,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -140,7 +138,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -152,7 +150,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -164,7 +162,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -176,7 +174,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -185,7 +183,7 @@ class _JoinPageState extends State<JoinPage> {
                     "\nRed Army Units",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -196,7 +194,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -205,7 +203,7 @@ class _JoinPageState extends State<JoinPage> {
                     "\n70th Guards",
                     TextStyle(
                       fontSize: alertSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -213,7 +211,7 @@ class _JoinPageState extends State<JoinPage> {
                     "\nBritish Unit",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -224,7 +222,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -233,7 +231,7 @@ class _JoinPageState extends State<JoinPage> {
                     "\nCommonwealth Unit",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -244,7 +242,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -253,7 +251,7 @@ class _JoinPageState extends State<JoinPage> {
                     "\nQueen's Own Rifles of Canada*",
                     TextStyle(
                       fontSize: alertSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -261,7 +259,7 @@ class _JoinPageState extends State<JoinPage> {
                     "\nGerman Units",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -272,7 +270,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -284,7 +282,7 @@ class _JoinPageState extends State<JoinPage> {
                         TextStyle(
                           fontSize: alertSize,
                           decoration: TextDecoration.underline,
-                          color: Colors.black,
+                          color: textColor,
                         ),
                         TextAlign.center),
                   ),
@@ -295,7 +293,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -307,7 +305,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -316,7 +314,7 @@ class _JoinPageState extends State<JoinPage> {
                     "\nJapanese Unit",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -327,7 +325,7 @@ class _JoinPageState extends State<JoinPage> {
                       TextStyle(
                         fontSize: alertSize,
                         decoration: TextDecoration.underline,
-                        color: Colors.black,
+                        color: textColor,
                       ),
                       TextAlign.center,
                     ),
@@ -340,7 +338,7 @@ class _JoinPageState extends State<JoinPage> {
                     image: AssetImage("assets/images/Join/EmbeddedImage.jpg"),
                     fit: BoxFit.fill,
                     colorFilter: new ColorFilter.mode(
-                        Colors.black.withAlpha(100), BlendMode.darken))),
+                        textColor.withAlpha(100), BlendMode.darken))),
             child: Column(
               children: [
                 createText(
@@ -348,7 +346,7 @@ class _JoinPageState extends State<JoinPage> {
                   TextStyle(
                     fontSize: headerTextFontSize,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: textColor,
                   ),
                   TextAlign.center,
                 ),
@@ -358,7 +356,7 @@ class _JoinPageState extends State<JoinPage> {
                   TextStyle(
                     fontSize: regularTextFontSize,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: textColor,
                   ),
                   TextAlign.left,
                 ),

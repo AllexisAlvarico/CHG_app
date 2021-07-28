@@ -55,7 +55,7 @@ class AlliesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE1DFDB), // cream color
+      backgroundColor: backgroundColor,
       body: SingleChildScrollView(
         // main scroller to scroll through all lists
         child: Center(
@@ -81,7 +81,7 @@ class AlliesPage extends StatelessWidget {
                     "American Units",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -125,7 +125,7 @@ class AlliesPage extends StatelessWidget {
                     "British & Commonwealth Units",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
@@ -169,7 +169,7 @@ class AlliesPage extends StatelessWidget {
                     "Red Army Units",
                     TextStyle(
                       fontSize: headerTextFontSize,
-                      color: Colors.black,
+                      color: textColor,
                     ),
                     TextAlign.center,
                   ),
